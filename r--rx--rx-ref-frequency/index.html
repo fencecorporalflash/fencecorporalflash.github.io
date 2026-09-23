@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>RX Ref Frequency: что это и как настроить опорную частоту приёмника</title>
+<meta name="description" content="Разбираем параметр RX Ref Frequency в радиостанциях и SDR: назначение опорной частоты, типичные значения, настройка, ошибки и способы калибровки.">
+<link rel="canonical" href="https://site-softoved.vercel.app/r--rx--rx-ref-frequency/">
+<meta name="yandex-verification" content="fc9f537217e81245" /><meta name="google-site-verification" content="fIx9eMknL_2iwjcMqK6htGou7eSQ2vqct7AAROaxXG0" />
+<meta property="og:type" content="article">
+<meta property="og:title" content="RX Ref Frequency: что это и как настроить опорную частоту приёмника">
+<meta property="og:description" content="Разбираем параметр RX Ref Frequency в радиостанциях и SDR: назначение опорной частоты, типичные значения, настройка, ошибки и способы калибровки.">
+<meta property="og:url" content="https://site-softoved.vercel.app/r--rx--rx-ref-frequency/">
+<meta property="og:site_name" content="Софтовед">
+<meta property="og:locale" content="ru_RU">
+<meta name="robots" content="index, follow">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap">
+<link rel="stylesheet" href="/style.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"RX Ref Frequency: опорная частота приёмника и её настройка","description":"Разбираем параметр RX Ref Frequency в радиостанциях и SDR: назначение опорной частоты, типичные значения, настройка, ошибки и способы калибровки.","datePublished":"2026-09-24T10:00:00.000Z","dateModified":"2026-09-24T10:00:00.000Z","mainEntityOfPage":"https://site-softoved.vercel.app/r--rx--rx-ref-frequency/","publisher":{"@type":"Organization","name":"Софтовед"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Главная","item":"https://site-softoved.vercel.app/"},{"@type":"ListItem","position":2,"name":"RX Ref Frequency: опорная частота приёмника и её настройка","item":"https://site-softoved.vercel.app/r--rx--rx-ref-frequency/"}]}</script>
+</head>
+<body>
+<div class="reading-progress" id="readProgress"></div><header class="top"><div class="wrap"><a class="logo" href="/"><span class="logo-icon">🔧</span><span>Софтовед</span></a><button class="mobile-menu-btn" aria-label="Меню" onclick="this.nextElementSibling.classList.toggle('open')">☰</button><nav><a href="/">Главная</a><a href="/category/разное/">📁 Разное</a><a href="/category/ноутбуки-и-пк/">💻 Ноутбуки и ПК</a><a href="/category/софт-ос-и-драйверы/">💾 Софт, ОС и драйверы</a><a href="/category/смартфоны-и-гаджеты/">📱 Смартфоны и гаджеты</a><div class="nav-dropdown"><button class="nav-dropdown-btn" onclick="this.parentElement.classList.toggle('open')">📂 Все разделы ▾</button><div class="nav-dropdown-menu"><a href="/category/разное/">📁 Разное</a><a href="/category/ноутбуки-и-пк/">💻 Ноутбуки и ПК</a><a href="/category/софт-ос-и-драйверы/">💾 Софт, ОС и драйверы</a><a href="/category/смартфоны-и-гаджеты/">📱 Смартфоны и гаджеты</a><a href="/category/ремонт-и-diy-электроника/">🛠️ Ремонт и DIY электроника</a><a href="/category/компоненты-и-запчасти/">🔩 Компоненты и запчасти</a><a href="/category/рации-и-радиостанции/">📻 Рации и радиостанции</a><a href="/category/табачные-нагреватели/">🌿 Табачные нагреватели</a><a href="/category/дроны-и-квадрокоптеры/">🚁 Дроны и квадрокоптеры</a><a href="/category/бытовая-техника-и-тв/">📺 Бытовая техника и ТВ</a><a href="/category/3d-печать/">🖨️ 3D-печать</a><a href="/category/автоэлектроника-и-навигация/">🚗 Автоэлектроника и навигация</a></div></div><a href="/about/">О проекте</a></nav></div></header>
+<main>
+<nav class="crumbs" aria-label="Навигация"><div class="wrap"><a href="/">Главная</a><span class="sep">›</span><a href="/category/разное/">Разное</a><span class="sep">›</span><span class="current">RX Ref Frequency: опорная частота приёмника и её настройка</span></div></nav><div class="wrap"><div class="article-layout"><div class="article-main"><h1>RX Ref Frequency: опорная частота приёмника и её настройка</h1>
+<div class="meta">Обновлено 24 сентября 2026 г.</div>
+<nav class="mobile-toc"><details><summary>📋 Содержание</summary><ul><li><a href="#h1">Что такое опорная частота приёмника</a></li><li><a href="#h2">Типичные значения опорной частоты</a></li><li><a href="#h3">Где встречается параметр RX Ref Frequency</a></li></ul></details></nav>
+<div class="article-body">
+<p>Ошибка в параметре <strong>RX Ref Frequency</strong> — одна из самых частых причин, почему приёмник «слышит» станцию не на той частоте, которая указана на дисплее, или ловит сигнал со смещением в несколько килогерц. Этот параметр задаёт опорную частоту, от которой синтезатор приёмника отсчитывает все рабочие частоты, и даже небольшое отклонение опорника приводит к систематической расстройке по всему диапазону.</p>
+
+<p>В статье разберём, что скрывается за термином <em>RX ref frequency</em> в радиостанциях, SDR-приёмниках и сканерах, какие значения встречаются на практике, как проверить точность опорного генератора и что делать, если приём уходит в сторону от реальной частоты.</p>
+
+<h2 id="h1">Что такое опорная частота приёмника</h2>
+
+<p><strong>Reference frequency</strong> (опорная частота) — это сигнал от стабильного генератора, который служит «эталоном» для синтезатора частоты приёмника. ФАПЧ-синтезатор (PLL) умножает и делит эту частоту, формируя сигнал гетеродина, а тот, в свою очередь, определяет, на какую частоту фактически настроен приёмный тракт.</p>
+
+<p>Логика простая: если опорный генератор отклонился, например, на несколько ppm (миллионных долей), то и вся шкала приёмника смещается пропорционально. На частоте 145 МГц уход опорника на 1 ppm даёт ошибку около 145 Гц, а на 450 МГц — уже около 450 Гц. Для узкополосных цифровых режимов (<em>DMR</em>, <em>dPMR</em>) такое смещение уже способно заметно ухудшить приём.</p>
+
+<p>В разных устройствах параметр может называться по-разному: Ref Freq, Reference, XTAL, TCXO freq, а в прошивках и софте — rx_ref_frequency или ref_freq. Суть везде одна.</p>
+
+<h2 id="h2">Типичные значения опорной частоты</h2>
+
+<p>Конкретное значение зависит от схемотехники устройства, и универсальной цифры не существует. Производитель выбирает опорный кварц или TCXO исходя из архитектуры синтезатора. В таблице приведены часто встречающиеся номиналы — но для вашей модели значение нужно сверять с сервисной документацией.</p>
+
+<table>
+<thead>
+<tr><th>Тип устройства</th><th>Типичный опорный источник</th><th>Особенности</th></tr>
+</thead>
+<tbody>
+<tr><td>Портативные радиостанции</td><td>TCXO, часто в диапазоне 12–26 МГц</td><td>Компактный термокомпенсированный генератор</td></tr>
+<tr><td>SDR-приёмники (RTL-SDR и аналоги)</td><td>Кварцевый генератор, часто 28,8 МГц</td><td>Дешёвые кварцы заметно «плывут» по температуре</td></tr>
+<tr><td>Сканеры и стационарные приёмники</td><td>TCXO/OCXO, 10 МГц как внешний эталон</td><td>Часто есть вход внешней опоры 10 МГц</td></tr>
+<tr><td>Профессиональные репитеры</td><td>OCXO или GPS-дисциплинированный генератор</td><td>Высокая долговременная стабильность</td></tr>
+</tbody>
+</table>
+
+<blockquote>⚠️ <strong>Внимание:</strong> не пытайтесь подставить значение опорной частоты от другой модели или «типовое» из интернета. Неверное значение ref frequency в настройках приведёт к тому, что синтезатор будет считать все частоты неправильно, и приёмник окажется полностью расстроенным.</blockquote>
+
+<h2 id="h3">Где встречается параметр RX Ref Frequency</h2>
+
+<p>Чаще всего с этим параметром пользователь сталкивается в трёх ситуациях. Первая — настройка SDR-софта: в программах вроде <em>SDR#</em>, <em>HDSDR</em> или <em>Gqrx</em> есть поле коррекции частоты (обычно в ppm), которое компенсирует уход опорного кварца донгла. Вторая — сервисная настройка радиостанций через фирменный CPS-софт, где в разделе выравнивания (alignment) задаётся или калибруется опора. Третья — конфигурационные файлы открытых прошивок и SDR-фреймворков, где параметр прописан явно.</p>
+
+<ul>
+<li>📻 В CPS радиостанций — в разделах <em>Alignment</em> / <em>Tune</em> / <em>Test Mode</em></li>
+<li>💻 В SDR-программах — как поправка ppm correction или frequency correction</li>
+<li>🔧 В сервисных мануалах — как процедура <em>reference oscillator adjustment</em></li>
+<li>📄 В конфигурациях открытых проектов — как поле ref_freq или xtal_freq</li>
+</ul>
+
+📊 Где вы столкнулись с параметром RX Ref Frequency?
+</div>
+<div class="offer-banner" data-nosnippet>
+<h3>Анонимный чат в MAX</h3>
+<p>Найди собеседника прямо сейчас — анонимно и бесплатно</p>
+<div class="btns">
+<a href="https://max.ru/id370307848837_bot?start=vercel" target="_blank" rel="noopener nofollow sponsored">Поиск парней</a>
+<a href="https://max.ru/id370307848837_bot?start=vercel" target="_blank" rel="noopener nofollow sponsored" class="alt">Поиск девушек</a>
+</div>
+</div>
+
+<div class="article-updated">Обновлено 24 сентября 2026 г.</div></div><aside class="article-sidebar"><div class="sidebar-toc"><h3>Содержание</h3><ul><li><a href="#h1">Что такое опорная частота приёмника</a></li><li><a href="#h2">Типичные значения опорной частоты</a></li><li><a href="#h3">Где встречается параметр RX Ref Frequency</a></li></ul></div><div class="sidebar-related"><h3>Похожие статьи</h3><ul><li><a href="/0--0---0-16-1/">0 16 1: что означают адреса 192.168.0.1, маска /16 и 192.168.1.1</a></li><li><a href="/0--0---0-4-6c-12-0-4-3c-7-pri-c-4-1-6/">Строка 0 4 6C 12 0 4 3C 7 при C 4 1 6: разбор hex-данных диагностики</a></li><li><a href="/0--0---0-5-amper/">0,5 Ампер: что это значит, где применяется и что можно заряжать</a></li><li><a href="/0--0---0-5kh-5-16-0-8/">Маркировка 5х… R16: как расшифровать параметры колёсных дисков</a></li></ul></div></aside></div><section class="related-bottom"><div class="related-bottom-heading">Читайте также</div><div class="related-bottom-grid"><a class="related-bottom-card" href="/0--0---0-16-1/"><div class="related-bottom-title">0 16 1: что означают адреса 192.168.0.1, маска /16 и 192.168.1.1</div><div class="related-bottom-desc">Разбираемся с запросом 0 16 1: что значат адреса 192.168.0.1 и 192.168.1.1, маска подсети /16, как проверить и настроить сеть на роутере и компьютере.</div></a><a class="related-bottom-card" href="/0--0---0-4-6c-12-0-4-3c-7-pri-c-4-1-6/"><div class="related-bottom-title">Строка 0 4 6C 12 0 4 3C 7 при C 4 1 6: разбор hex-данных диагностики</div><div class="related-bottom-desc">Разбираем шестнадцатеричную строку 0 4 6C 12 0 4 3C 7 при ответе C 4 1 6: что означают байты, как декодировать ответ ELM327 и проверить данные.</div></a><a class="related-bottom-card" href="/0--0---0-5-amper/"><div class="related-bottom-title">0,5 Ампер: что это значит, где применяется и что можно заряжать</div><div class="related-bottom-desc">Что означает ток 0,5 А на зарядке и блоке питания, какие устройства можно питать, чем грозит превышение нагрузки и как правильно подобрать адаптер.</div></a><a class="related-bottom-card" href="/0--0---0-5kh-5-16-0-8/"><div class="related-bottom-title">Маркировка 5х… R16: как расшифровать параметры колёсных дисков</div><div class="related-bottom-desc">Разбираем маркировку колёсных дисков вида 5х… R16: разболтовка, диаметр, вылет, ширина. Как правильно измерить параметры и подобрать диски к автомобилю.</div></a></div></section></div>
+</main>
+<footer><div class="wrap"><div class="footer-grid"><div class="footer-col"><div class="footer-brand">🔧 Софтовед</div><p class="footer-about">Разобраться. Настроить. Починить.</p></div><div class="footer-col"><h4>Информация</h4><ul><li><a href="/">Главная</a></li><li><a href="/about/">О проекте</a></li><li><a href="/sitemap.xml">Карта сайта</a></li></ul></div><div class="footer-col"><h4>Контакты</h4><ul><li>Информационный портал</li><li>Материалы носят справочный характер</li></ul></div></div><div class="footer-bottom">&copy; 2026 Софтовед. Все права защищены.</div></div></footer>
+<script>
+(function(){var p=document.getElementById('readProgress');if(!p)return;window.addEventListener('scroll',function(){var h=document.documentElement.scrollHeight-window.innerHeight;p.style.width=h>0?(window.scrollY/h*100)+'%':'0'});var b=document.querySelector('.mobile-menu-btn');if(b){b.addEventListener('click',function(){var n=this.nextElementSibling;if(n)n.classList.toggle('open')})}})();
+</script>
+<script>(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};m[i].l=1*new Date();for(var j=0;j<document.scripts.length;j++){if(document.scripts[j].src===r){return;}}k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})(window,document,'script','https://mc.yandex.ru/metrika/tag.js?id=112976139','ym');ym(112976139,'init',{ssr:true,webvisor:true,clickmap:true,accurateTrackBounce:true,trackLinks:true});</script><noscript><div><img src="https://mc.yandex.ru/watch/112976139" style="position:absolute;left:-9999px" alt=""></div></noscript>
+</body>
+</html>

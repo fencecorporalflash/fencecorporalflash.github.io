@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>CPU Ratio Apply Mode в BIOS MSI: что это и как настроить</title>
+<meta name="description" content="Разбираем параметр CPU Ratio Apply Mode в BIOS материнских плат MSI: режимы All Core, Per Core и Turbo Ratio, их влияние на разгон и стабильность системы.">
+<link rel="canonical" href="https://site-softoved.vercel.app/c--cp--cpu-ratio-apply-mode-msi-chto-eto/">
+<meta name="yandex-verification" content="fc9f537217e81245" /><meta name="google-site-verification" content="fIx9eMknL_2iwjcMqK6htGou7eSQ2vqct7AAROaxXG0" />
+<meta property="og:type" content="article">
+<meta property="og:title" content="CPU Ratio Apply Mode в BIOS MSI: что это и как настроить">
+<meta property="og:description" content="Разбираем параметр CPU Ratio Apply Mode в BIOS материнских плат MSI: режимы All Core, Per Core и Turbo Ratio, их влияние на разгон и стабильность системы.">
+<meta property="og:url" content="https://site-softoved.vercel.app/c--cp--cpu-ratio-apply-mode-msi-chto-eto/">
+<meta property="og:site_name" content="Софтовед">
+<meta property="og:locale" content="ru_RU">
+<meta name="robots" content="index, follow">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap">
+<link rel="stylesheet" href="/style.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"CPU Ratio Apply Mode в BIOS MSI: что это за параметр и как его настроить","description":"Разбираем параметр CPU Ratio Apply Mode в BIOS материнских плат MSI: режимы All Core, Per Core и Turbo Ratio, их влияние на разгон и стабильность системы.","datePublished":"2026-09-24T10:00:00.000Z","dateModified":"2026-09-24T10:00:00.000Z","mainEntityOfPage":"https://site-softoved.vercel.app/c--cp--cpu-ratio-apply-mode-msi-chto-eto/","publisher":{"@type":"Organization","name":"Софтовед"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Главная","item":"https://site-softoved.vercel.app/"},{"@type":"ListItem","position":2,"name":"CPU Ratio Apply Mode в BIOS MSI: что это за параметр и как его настроить","item":"https://site-softoved.vercel.app/c--cp--cpu-ratio-apply-mode-msi-chto-eto/"}]}</script>
+</head>
+<body>
+<div class="reading-progress" id="readProgress"></div><header class="top"><div class="wrap"><a class="logo" href="/"><span class="logo-icon">🔧</span><span>Софтовед</span></a><button class="mobile-menu-btn" aria-label="Меню" onclick="this.nextElementSibling.classList.toggle('open')">☰</button><nav><a href="/">Главная</a><a href="/category/разное/">📁 Разное</a><a href="/category/ноутбуки-и-пк/">💻 Ноутбуки и ПК</a><a href="/category/софт-ос-и-драйверы/">💾 Софт, ОС и драйверы</a><a href="/category/смартфоны-и-гаджеты/">📱 Смартфоны и гаджеты</a><div class="nav-dropdown"><button class="nav-dropdown-btn" onclick="this.parentElement.classList.toggle('open')">📂 Все разделы ▾</button><div class="nav-dropdown-menu"><a href="/category/разное/">📁 Разное</a><a href="/category/ноутбуки-и-пк/">💻 Ноутбуки и ПК</a><a href="/category/софт-ос-и-драйверы/">💾 Софт, ОС и драйверы</a><a href="/category/смартфоны-и-гаджеты/">📱 Смартфоны и гаджеты</a><a href="/category/ремонт-и-diy-электроника/">🛠️ Ремонт и DIY электроника</a><a href="/category/компоненты-и-запчасти/">🔩 Компоненты и запчасти</a><a href="/category/рации-и-радиостанции/">📻 Рации и радиостанции</a><a href="/category/табачные-нагреватели/">🌿 Табачные нагреватели</a><a href="/category/дроны-и-квадрокоптеры/">🚁 Дроны и квадрокоптеры</a><a href="/category/бытовая-техника-и-тв/">📺 Бытовая техника и ТВ</a><a href="/category/3d-печать/">🖨️ 3D-печать</a><a href="/category/автоэлектроника-и-навигация/">🚗 Автоэлектроника и навигация</a></div></div><a href="/about/">О проекте</a></nav></div></header>
+<main>
+<nav class="crumbs" aria-label="Навигация"><div class="wrap"><a href="/">Главная</a><span class="sep">›</span><a href="/category/ноутбуки-и-пк/">Ноутбуки и ПК</a><span class="sep">›</span><span class="current">CPU Ratio Apply Mode в BIOS MSI: что это за параметр и как его настроить</span></div></nav><div class="wrap"><div class="article-layout"><div class="article-main"><h1>CPU Ratio Apply Mode в BIOS MSI: что это за параметр и как его настроить</h1>
+<div class="meta">Обновлено 24 сентября 2026 г.</div>
+<nav class="mobile-toc"><details><summary>📋 Содержание</summary><ul><li><a href="#h1">Что такое CPU Ratio Apply Mode простыми словами</a></li><li><a href="#h2">Основные режимы: All Core, Per Core и Turbo Ratio</a></li></ul></details></nav>
+<div class="article-body">
+<p>Открыв раздел OC в BIOS материнской платы <em>MSI</em>, многие пользователи замечают строку <strong>CPU Ratio Apply Mode</strong> и не понимают, какое значение выбрать — от этого параметра напрямую зависит, как именно процессор применит множитель частоты: ко всем ядрам сразу или к каждому по отдельности. Неверный выбор режима может привести к тому, что разгон не заработает, система станет нестабильной или процессор будет перегреваться под нагрузкой.</p>
+
+<p>В этой статье разберём, что означает <strong>CPU Ratio Apply Mode</strong>, какие варианты предлагает BIOS плат <em>MSI</em>, чем они отличаются на практике и какой режим выбрать для ручного разгона или повседневной работы.</p>
+
+<h2 id="h1">Что такое CPU Ratio Apply Mode простыми словами</h2>
+
+<p>Частота процессора формируется как произведение базовой частоты шины (BCLK, обычно 100 МГц) на множитель — <strong>CPU Ratio</strong>. Например, множитель 50 при базовой частоте 100 МГц даёт итоговые 5,0 ГГц. Параметр <em>CPU Ratio Apply Mode</em> определяет способ применения этого множителя к ядрам процессора.</p>
+
+<p>Проще говоря, BIOS спрашивает у вас: задать один множитель для всех ядер сразу или настроить каждое ядро (либо группу ядер) индивидуально? От ответа зависит гибкость разгона и то, как процессор будет вести себя в многопоточных и однопоточных задачах.</p>
+
+<p>Точный набор доступных режимов зависит от конкретной модели платы, чипсета и поколения процессора. Названия пунктов и их расположение могут отличаться, поэтому сверяйтесь с руководством к вашей плате на официальном сайте <em>MSI</em>.</p>
+
+<h2 id="h2">Основные режимы: All Core, Per Core и Turbo Ratio</h2>
+
+<p>В BIOS плат <em>MSI</em> для совместимых процессоров <em>Intel</em> чаще всего встречаются три варианта применения множителя:</p>
+
+<ul>
+<li>🔧 <strong>All Core</strong> — единый множитель применяется ко всем ядрам одновременно. Классический вариант для стационарного разгона: все ядра работают на одной фиксированной частоте.</li>
+<li>⚙️ <strong>Per Core</strong> — множитель задаётся индивидуально для каждого ядра. Позволяет разогнать сильные ядра выше, а слабые оставить на умеренной частоте.</li>
+<li>🚀 <strong>Turbo Ratio</strong> — множитель настраивается в зависимости от количества активных ядер: при нагрузке на 1–2 ядра частота выше, при полной загрузке — ниже. Похоже на логику штатного Turbo Boost, но с ручными значениями.</li>
+</ul>
+
+<p>Пункт CPU Ratio Apply Mode появляется в меню OC → Advanced CPU Configuration (путь может отличаться) и активен, когда включён ручной режим задания множителя. Если множитель оставлен в Auto, выбор режима ни на что не повлияет.</p>
+
+📊 Какой режим CPU Ratio Apply Mode вы используете?
+</div>
+<div class="offer-banner" data-nosnippet>
+<h3>Анонимный чат в MAX</h3>
+<p>Найди собеседника прямо сейчас — анонимно и бесплатно</p>
+<div class="btns">
+<a href="https://max.ru/id370307848837_bot?start=vercel" target="_blank" rel="noopener nofollow sponsored">Поиск парней</a>
+<a href="https://max.ru/id370307848837_bot?start=vercel" target="_blank" rel="noopener nofollow sponsored" class="alt">Поиск девушек</a>
+</div>
+</div>
+
+<div class="article-updated">Обновлено 24 сентября 2026 г.</div></div><aside class="article-sidebar"><div class="sidebar-toc"><h3>Содержание</h3><ul><li><a href="#h1">Что такое CPU Ratio Apply Mode простыми словами</a></li><li><a href="#h2">Основные режимы: All Core, Per Core и Turbo Ratio</a></li></ul></div><div class="sidebar-related"><h3>Похожие статьи</h3><ul><li><a href="/0--0---0-16-1/">0 16 1: что означают адреса 192.168.0.1, маска /16 и 192.168.1.1</a></li><li><a href="/0--0---0-4-6c-12-0-4-3c-7-pri-c-4-1-6/">Строка 0 4 6C 12 0 4 3C 7 при C 4 1 6: разбор hex-данных диагностики</a></li><li><a href="/0--0---0-5-amper/">0,5 Ампер: что это значит, где применяется и что можно заряжать</a></li><li><a href="/0--0---0-5kh-5-16-0-8/">Маркировка 5х… R16: как расшифровать параметры колёсных дисков</a></li></ul></div></aside></div><section class="related-bottom"><div class="related-bottom-heading">Читайте также</div><div class="related-bottom-grid"><a class="related-bottom-card" href="/0--0---0-16-1/"><div class="related-bottom-title">0 16 1: что означают адреса 192.168.0.1, маска /16 и 192.168.1.1</div><div class="related-bottom-desc">Разбираемся с запросом 0 16 1: что значат адреса 192.168.0.1 и 192.168.1.1, маска подсети /16, как проверить и настроить сеть на роутере и компьютере.</div></a><a class="related-bottom-card" href="/0--0---0-4-6c-12-0-4-3c-7-pri-c-4-1-6/"><div class="related-bottom-title">Строка 0 4 6C 12 0 4 3C 7 при C 4 1 6: разбор hex-данных диагностики</div><div class="related-bottom-desc">Разбираем шестнадцатеричную строку 0 4 6C 12 0 4 3C 7 при ответе C 4 1 6: что означают байты, как декодировать ответ ELM327 и проверить данные.</div></a><a class="related-bottom-card" href="/0--0---0-5-amper/"><div class="related-bottom-title">0,5 Ампер: что это значит, где применяется и что можно заряжать</div><div class="related-bottom-desc">Что означает ток 0,5 А на зарядке и блоке питания, какие устройства можно питать, чем грозит превышение нагрузки и как правильно подобрать адаптер.</div></a><a class="related-bottom-card" href="/0--0---0-5kh-5-16-0-8/"><div class="related-bottom-title">Маркировка 5х… R16: как расшифровать параметры колёсных дисков</div><div class="related-bottom-desc">Разбираем маркировку колёсных дисков вида 5х… R16: разболтовка, диаметр, вылет, ширина. Как правильно измерить параметры и подобрать диски к автомобилю.</div></a></div></section></div>
+</main>
+<footer><div class="wrap"><div class="footer-grid"><div class="footer-col"><div class="footer-brand">🔧 Софтовед</div><p class="footer-about">Разобраться. Настроить. Починить.</p></div><div class="footer-col"><h4>Информация</h4><ul><li><a href="/">Главная</a></li><li><a href="/about/">О проекте</a></li><li><a href="/sitemap.xml">Карта сайта</a></li></ul></div><div class="footer-col"><h4>Контакты</h4><ul><li>Информационный портал</li><li>Материалы носят справочный характер</li></ul></div></div><div class="footer-bottom">&copy; 2026 Софтовед. Все права защищены.</div></div></footer>
+<script>
+(function(){var p=document.getElementById('readProgress');if(!p)return;window.addEventListener('scroll',function(){var h=document.documentElement.scrollHeight-window.innerHeight;p.style.width=h>0?(window.scrollY/h*100)+'%':'0'});var b=document.querySelector('.mobile-menu-btn');if(b){b.addEventListener('click',function(){var n=this.nextElementSibling;if(n)n.classList.toggle('open')})}})();
+</script>
+<script>(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};m[i].l=1*new Date();for(var j=0;j<document.scripts.length;j++){if(document.scripts[j].src===r){return;}}k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})(window,document,'script','https://mc.yandex.ru/metrika/tag.js?id=112976139','ym');ym(112976139,'init',{ssr:true,webvisor:true,clickmap:true,accurateTrackBounce:true,trackLinks:true});</script><noscript><div><img src="https://mc.yandex.ru/watch/112976139" style="position:absolute;left:-9999px" alt=""></div></noscript>
+</body>
+</html>

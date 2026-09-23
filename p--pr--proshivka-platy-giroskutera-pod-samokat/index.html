@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Прошивка платы гироскутера под самокат: инструкция по переделке</title>
+<meta name="description" content="Как перепрошить плату гироскутера под электросамокат: выбор прошивки, подключение ST-Link, настройка параметров и типичные ошибки при переделке.">
+<link rel="canonical" href="https://site-softoved.vercel.app/p--pr--proshivka-platy-giroskutera-pod-samokat/">
+<meta name="yandex-verification" content="fc9f537217e81245" /><meta name="google-site-verification" content="fIx9eMknL_2iwjcMqK6htGou7eSQ2vqct7AAROaxXG0" />
+<meta property="og:type" content="article">
+<meta property="og:title" content="Прошивка платы гироскутера под самокат: инструкция по переделке">
+<meta property="og:description" content="Как перепрошить плату гироскутера под электросамокат: выбор прошивки, подключение ST-Link, настройка параметров и типичные ошибки при переделке.">
+<meta property="og:url" content="https://site-softoved.vercel.app/p--pr--proshivka-platy-giroskutera-pod-samokat/">
+<meta property="og:site_name" content="Софтовед">
+<meta property="og:locale" content="ru_RU">
+<meta name="robots" content="index, follow">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap">
+<link rel="stylesheet" href="/style.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Прошивка платы гироскутера под самокат: полное руководство по переделке","description":"Как перепрошить плату гироскутера под электросамокат: выбор прошивки, подключение ST-Link, настройка параметров и типичные ошибки при переделке.","datePublished":"2026-09-24T10:00:00.000Z","dateModified":"2026-09-24T10:00:00.000Z","mainEntityOfPage":"https://site-softoved.vercel.app/p--pr--proshivka-platy-giroskutera-pod-samokat/","publisher":{"@type":"Organization","name":"Софтовед"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Главная","item":"https://site-softoved.vercel.app/"},{"@type":"ListItem","position":2,"name":"Прошивка платы гироскутера под самокат: полное руководство по переделке","item":"https://site-softoved.vercel.app/p--pr--proshivka-platy-giroskutera-pod-samokat/"}]}</script>
+</head>
+<body>
+<div class="reading-progress" id="readProgress"></div><header class="top"><div class="wrap"><a class="logo" href="/"><span class="logo-icon">🔧</span><span>Софтовед</span></a><button class="mobile-menu-btn" aria-label="Меню" onclick="this.nextElementSibling.classList.toggle('open')">☰</button><nav><a href="/">Главная</a><a href="/category/разное/">📁 Разное</a><a href="/category/ноутбуки-и-пк/">💻 Ноутбуки и ПК</a><a href="/category/софт-ос-и-драйверы/">💾 Софт, ОС и драйверы</a><a href="/category/смартфоны-и-гаджеты/">📱 Смартфоны и гаджеты</a><div class="nav-dropdown"><button class="nav-dropdown-btn" onclick="this.parentElement.classList.toggle('open')">📂 Все разделы ▾</button><div class="nav-dropdown-menu"><a href="/category/разное/">📁 Разное</a><a href="/category/ноутбуки-и-пк/">💻 Ноутбуки и ПК</a><a href="/category/софт-ос-и-драйверы/">💾 Софт, ОС и драйверы</a><a href="/category/смартфоны-и-гаджеты/">📱 Смартфоны и гаджеты</a><a href="/category/ремонт-и-diy-электроника/">🛠️ Ремонт и DIY электроника</a><a href="/category/компоненты-и-запчасти/">🔩 Компоненты и запчасти</a><a href="/category/рации-и-радиостанции/">📻 Рации и радиостанции</a><a href="/category/табачные-нагреватели/">🌿 Табачные нагреватели</a><a href="/category/дроны-и-квадрокоптеры/">🚁 Дроны и квадрокоптеры</a><a href="/category/бытовая-техника-и-тв/">📺 Бытовая техника и ТВ</a><a href="/category/3d-печать/">🖨️ 3D-печать</a><a href="/category/автоэлектроника-и-навигация/">🚗 Автоэлектроника и навигация</a></div></div><a href="/about/">О проекте</a></nav></div></header>
+<main>
+<nav class="crumbs" aria-label="Навигация"><div class="wrap"><a href="/">Главная</a><span class="sep">›</span><a href="/category/софт-ос-и-драйверы/">Софт, ОС и драйверы</a><span class="sep">›</span><span class="current">Прошивка платы гироскутера под самокат: полное руководство по переделке</span></div></nav><div class="wrap"><div class="article-layout"><div class="article-main"><h1>Прошивка платы гироскутера под самокат: полное руководство по переделке</h1>
+<div class="meta">Обновлено 24 сентября 2026 г.</div>
+<nav class="mobile-toc"><details><summary>📋 Содержание</summary><ul><li><a href="#h1">Какие платы гироскутеров подходят для переделки</a></li><li><a href="#h2">Что понадобится для прошивки</a></li></ul></details></nav>
+<div class="article-body">
+<p>Плата управления от гироскутера после перепрошивки способна работать как полноценный контроллер электросамоката — это один из самых доступных способов собрать самодельный электротранспорт на бесщеточных мотор-колёсах. Стандартная прошивка гироскутера рассчитана на балансировку по данным гироскопа, поэтому для самоката её заменяют на альтернативную, где управление идёт от ручки газа и тормоза.</p>
+
+<p>Переделка популярна по простой причине: платы от неисправных или устаревших гироскутеров стоят недорого, а два мотор-колеса с датчиками Холла уже включены в конструкцию. Однако процесс требует аккуратности — ошибка при подключении программатора или неверные параметры прошивки могут вывести контроллер из строя или создать опасную ситуацию в движении.</p>
+
+<h2 id="h1">Какие платы гироскутеров подходят для переделки</h2>
+
+<p>Не каждая плата поддаётся перепрошивке. Основное требование — микроконтроллер семейства <strong>STM32F103</strong>, именно под него написано большинство открытых прошивок. Такие платы обычно имеют два разъёма под мотор-колёса, гироскоп на отдельной подплате и характерную компоновку с силовыми транзисторами на алюминиевой пластине.</p>
+
+<p>Встречаются платы на других контроллерах — например, клонах или чипах без документации. Их перепрошивка либо невозможна, либо требует индивидуальной разработки. Перед покупкой или разборкой стоит визуально определить маркировку основного чипа: она нанесена на корпусе микросхемы.</p>
+
+<ul>
+<li>🔧 <strong>Маркировка STM32F103</strong> на главном чипе — главный признак совместимости с открытыми прошивками.</li>
+<li>🔌 Наличие <strong>площадок SWD</strong> (точки CLK, DIO, GND, 3.3V) для подключения программатора.</li>
+<li>⚡ Исправные <strong>силовые ключи</strong> и драйверы фаз — прошивка не оживит сгоревшую силовую часть.</li>
+<li>📋 Платы с односторонней компоновкой и двумя гироскопами — наиболее изученный сообществом вариант.</li>
+</ul>
+
+<blockquote>⚠️ <strong>Внимание:</strong> даже среди плат на STM32 встречаются ревизии с отличающейся распиновкой фаз и датчиков тока. Прошивка, собранная под другую ревизию, может привести к короткому замыканию силового каскада. Сверяйте ревизию платы с документацией конкретного проекта прошивки.</blockquote>
+
+<h2 id="h2">Что понадобится для прошивки</h2>
+
+<p>Минимальный набор — программатор <em>ST-Link V2</em> (или совместимый клон), компьютер и соединительные провода. Паяльник потребуется почти всегда: штатных разъёмов для отладки на платах гироскутеров нет, провода придётся припаивать к контактным площадкам.</p>
+
+<p>Из программного обеспечения обычно используют утилиту от производителя микроконтроллера для загрузки готового файла прошивки, либо среду разработки, если планируется компиляция из исходников с собственными параметрами. Точный набор инструментов зависит от выбранного проекта прошивки — следуйте его официальной документации.</p>
+
+<h4>☑️ Подготовка к прошивке платы</h4>Проверить маркировку микроконтроллера (STM32F103)Прозвонить и проверить силовые ключи и драйверыПрипаять провода к площадкам SWDПодключить ST-Link и определить чип в утилитеСохранить дамп заводской прошивки перед записьюВыполнено: 0 / 5
+</div>
+<div class="offer-banner" data-nosnippet>
+<h3>Анонимный чат в MAX</h3>
+<p>Найди собеседника прямо сейчас — анонимно и бесплатно</p>
+<div class="btns">
+<a href="https://max.ru/id370307848837_bot?start=vercel" target="_blank" rel="noopener nofollow sponsored">Поиск парней</a>
+<a href="https://max.ru/id370307848837_bot?start=vercel" target="_blank" rel="noopener nofollow sponsored" class="alt">Поиск девушек</a>
+</div>
+</div>
+
+<div class="article-updated">Обновлено 24 сентября 2026 г.</div></div><aside class="article-sidebar"><div class="sidebar-toc"><h3>Содержание</h3><ul><li><a href="#h1">Какие платы гироскутеров подходят для переделки</a></li><li><a href="#h2">Что понадобится для прошивки</a></li></ul></div><div class="sidebar-related"><h3>Похожие статьи</h3><ul><li><a href="/0--0---0-16-1/">0 16 1: что означают адреса 192.168.0.1, маска /16 и 192.168.1.1</a></li><li><a href="/0--0---0-4-6c-12-0-4-3c-7-pri-c-4-1-6/">Строка 0 4 6C 12 0 4 3C 7 при C 4 1 6: разбор hex-данных диагностики</a></li><li><a href="/0--0---0-5-amper/">0,5 Ампер: что это значит, где применяется и что можно заряжать</a></li><li><a href="/0--0---0-5kh-5-16-0-8/">Маркировка 5х… R16: как расшифровать параметры колёсных дисков</a></li></ul></div></aside></div><section class="related-bottom"><div class="related-bottom-heading">Читайте также</div><div class="related-bottom-grid"><a class="related-bottom-card" href="/0--0---0-16-1/"><div class="related-bottom-title">0 16 1: что означают адреса 192.168.0.1, маска /16 и 192.168.1.1</div><div class="related-bottom-desc">Разбираемся с запросом 0 16 1: что значат адреса 192.168.0.1 и 192.168.1.1, маска подсети /16, как проверить и настроить сеть на роутере и компьютере.</div></a><a class="related-bottom-card" href="/0--0---0-4-6c-12-0-4-3c-7-pri-c-4-1-6/"><div class="related-bottom-title">Строка 0 4 6C 12 0 4 3C 7 при C 4 1 6: разбор hex-данных диагностики</div><div class="related-bottom-desc">Разбираем шестнадцатеричную строку 0 4 6C 12 0 4 3C 7 при ответе C 4 1 6: что означают байты, как декодировать ответ ELM327 и проверить данные.</div></a><a class="related-bottom-card" href="/0--0---0-5-amper/"><div class="related-bottom-title">0,5 Ампер: что это значит, где применяется и что можно заряжать</div><div class="related-bottom-desc">Что означает ток 0,5 А на зарядке и блоке питания, какие устройства можно питать, чем грозит превышение нагрузки и как правильно подобрать адаптер.</div></a><a class="related-bottom-card" href="/0--0---0-5kh-5-16-0-8/"><div class="related-bottom-title">Маркировка 5х… R16: как расшифровать параметры колёсных дисков</div><div class="related-bottom-desc">Разбираем маркировку колёсных дисков вида 5х… R16: разболтовка, диаметр, вылет, ширина. Как правильно измерить параметры и подобрать диски к автомобилю.</div></a></div></section></div>
+</main>
+<footer><div class="wrap"><div class="footer-grid"><div class="footer-col"><div class="footer-brand">🔧 Софтовед</div><p class="footer-about">Разобраться. Настроить. Починить.</p></div><div class="footer-col"><h4>Информация</h4><ul><li><a href="/">Главная</a></li><li><a href="/about/">О проекте</a></li><li><a href="/sitemap.xml">Карта сайта</a></li></ul></div><div class="footer-col"><h4>Контакты</h4><ul><li>Информационный портал</li><li>Материалы носят справочный характер</li></ul></div></div><div class="footer-bottom">&copy; 2026 Софтовед. Все права защищены.</div></div></footer>
+<script>
+(function(){var p=document.getElementById('readProgress');if(!p)return;window.addEventListener('scroll',function(){var h=document.documentElement.scrollHeight-window.innerHeight;p.style.width=h>0?(window.scrollY/h*100)+'%':'0'});var b=document.querySelector('.mobile-menu-btn');if(b){b.addEventListener('click',function(){var n=this.nextElementSibling;if(n)n.classList.toggle('open')})}})();
+</script>
+<script>(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};m[i].l=1*new Date();for(var j=0;j<document.scripts.length;j++){if(document.scripts[j].src===r){return;}}k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})(window,document,'script','https://mc.yandex.ru/metrika/tag.js?id=112976139','ym');ym(112976139,'init',{ssr:true,webvisor:true,clickmap:true,accurateTrackBounce:true,trackLinks:true});</script><noscript><div><img src="https://mc.yandex.ru/watch/112976139" style="position:absolute;left:-9999px" alt=""></div></noscript>
+</body>
+</html>

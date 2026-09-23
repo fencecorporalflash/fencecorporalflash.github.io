@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>FT232RL datasheet на русском: распиновка, характеристики, подключение</title>
+<meta name="description" content="Datasheet FT232RL на русском: распиновка выводов, основные характеристики, типовая схема подключения USB-UART преобразователя, драйверы и типичные ошибки.">
+<link rel="canonical" href="https://site-softoved.vercel.app/f--ft--ft232rl-datasheet-na-russkom/">
+<meta name="yandex-verification" content="fc9f537217e81245" /><meta name="google-site-verification" content="fIx9eMknL_2iwjcMqK6htGou7eSQ2vqct7AAROaxXG0" />
+<meta property="og:type" content="article">
+<meta property="og:title" content="FT232RL datasheet на русском: распиновка, характеристики, подключение">
+<meta property="og:description" content="Datasheet FT232RL на русском: распиновка выводов, основные характеристики, типовая схема подключения USB-UART преобразователя, драйверы и типичные ошибки.">
+<meta property="og:url" content="https://site-softoved.vercel.app/f--ft--ft232rl-datasheet-na-russkom/">
+<meta property="og:site_name" content="Софтовед">
+<meta property="og:locale" content="ru_RU">
+<meta name="robots" content="index, follow">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap">
+<link rel="stylesheet" href="/style.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"FT232RL datasheet на русском: характеристики, распиновка и подключение","description":"Datasheet FT232RL на русском: распиновка выводов, основные характеристики, типовая схема подключения USB-UART преобразователя, драйверы и типичные ошибки.","datePublished":"2026-09-24T10:00:00.000Z","dateModified":"2026-09-24T10:00:00.000Z","mainEntityOfPage":"https://site-softoved.vercel.app/f--ft--ft232rl-datasheet-na-russkom/","publisher":{"@type":"Organization","name":"Софтовед"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Главная","item":"https://site-softoved.vercel.app/"},{"@type":"ListItem","position":2,"name":"FT232RL datasheet на русском: характеристики, распиновка и подключение","item":"https://site-softoved.vercel.app/f--ft--ft232rl-datasheet-na-russkom/"}]}</script>
+</head>
+<body>
+<div class="reading-progress" id="readProgress"></div><header class="top"><div class="wrap"><a class="logo" href="/"><span class="logo-icon">🔧</span><span>Софтовед</span></a><button class="mobile-menu-btn" aria-label="Меню" onclick="this.nextElementSibling.classList.toggle('open')">☰</button><nav><a href="/">Главная</a><a href="/category/разное/">📁 Разное</a><a href="/category/ноутбуки-и-пк/">💻 Ноутбуки и ПК</a><a href="/category/софт-ос-и-драйверы/">💾 Софт, ОС и драйверы</a><a href="/category/смартфоны-и-гаджеты/">📱 Смартфоны и гаджеты</a><div class="nav-dropdown"><button class="nav-dropdown-btn" onclick="this.parentElement.classList.toggle('open')">📂 Все разделы ▾</button><div class="nav-dropdown-menu"><a href="/category/разное/">📁 Разное</a><a href="/category/ноутбуки-и-пк/">💻 Ноутбуки и ПК</a><a href="/category/софт-ос-и-драйверы/">💾 Софт, ОС и драйверы</a><a href="/category/смартфоны-и-гаджеты/">📱 Смартфоны и гаджеты</a><a href="/category/ремонт-и-diy-электроника/">🛠️ Ремонт и DIY электроника</a><a href="/category/компоненты-и-запчасти/">🔩 Компоненты и запчасти</a><a href="/category/рации-и-радиостанции/">📻 Рации и радиостанции</a><a href="/category/табачные-нагреватели/">🌿 Табачные нагреватели</a><a href="/category/дроны-и-квадрокоптеры/">🚁 Дроны и квадрокоптеры</a><a href="/category/бытовая-техника-и-тв/">📺 Бытовая техника и ТВ</a><a href="/category/3d-печать/">🖨️ 3D-печать</a><a href="/category/автоэлектроника-и-навигация/">🚗 Автоэлектроника и навигация</a></div></div><a href="/about/">О проекте</a></nav></div></header>
+<main>
+<nav class="crumbs" aria-label="Навигация"><div class="wrap"><a href="/">Главная</a><span class="sep">›</span><a href="/category/разное/">Разное</a><span class="sep">›</span><span class="current">FT232RL datasheet на русском: характеристики, распиновка и подключение</span></div></nav><div class="wrap"><div class="article-layout"><div class="article-main"><h1>FT232RL datasheet на русском: характеристики, распиновка и подключение</h1>
+<div class="meta">Обновлено 24 сентября 2026 г.</div>
+<nav class="mobile-toc"><details><summary>📋 Содержание</summary><ul><li><a href="#h1">Назначение и общие сведения о FT232RL</a></li><li><a href="#h2">Основные технические характеристики</a></li><li><a href="#h3">Распиновка FT232RL (SSOP-28)</a></li></ul></details></nav>
+<div class="article-body">
+<p>FT232RL — это микросхема преобразователя USB–UART от компании <em>FTDI</em>, и именно неправильное чтение её даташита чаще всего приводит к сгоревшим портам микроконтроллеров: разработчики путают уровни логики 3,3 В и 5 В, подключают питание не к тем выводам и получают неработающую связь по UART. Оригинальный datasheet написан на английском, поэтому ниже приведён структурированный перевод ключевых разделов документации с пояснениями по практическому применению.</p>
+
+<p>Чип массово применяется в USB-UART переходниках, программаторах для <em>Arduino</em>, <em>ESP8266</em>, <em>ESP32</em> и других микроконтроллеров. Понимание распиновки и режимов работы FT232RL избавляет от типовых ошибок при проектировании собственных плат и при использовании готовых модулей.</p>
+
+<h2 id="h1">Назначение и общие сведения о FT232RL</h2>
+
+<p>Микросхема <strong>FT232RL</strong> — это однокристальный преобразователь интерфейса USB в асинхронный последовательный порт (UART) с полной поддержкой сигналов модема. Чип не требует внешнего кварцевого резонатора: тактирование формируется встроенным генератором. Также внутри уже интегрирована EEPROM-память для хранения дескрипторов USB (VID, PID, серийный номер и строковые описания).</p>
+
+<p>Корпус — <em>SSOP-28</em> с шагом выводов 0,65 мм, что удобно для ручной пайки при аккуратной работе. Микросхема поддерживает скорости обмена от 300 бод до 3 Мбод, что покрывает практически все задачи отладки и прошивки микроконтроллеров.</p>
+
+<ul>
+<li>🔌 Полная аппаратная поддержка USB 2.0 Full Speed</li>
+<li>📡 UART с сигналами TXD, RXD, RTS, CTS, DTR, DSR, DCD, RI</li>
+<li>⚙️ Встроенная EEPROM для конфигурации без внешней памяти</li>
+<li>🔋 Питание от шины USB или от внешнего источника</li>
+<li>💡 Выводы для светодиодов индикации приёма и передачи</li>
+</ul>
+
+<h2 id="h2">Основные технические характеристики</h2>
+
+<p>Ключевые параметры из даташита, которые нужно учитывать при проектировании схемы, сведены в таблицу ниже. Обратите внимание: точные значения токов и предельных режимов всегда сверяйте с актуальной версией официального документа FTDI, так как ревизии даташита периодически обновляются.</p>
+
+<table>
+<thead>
+<tr><th>Параметр</th><th>Значение</th><th>Примечание</th></tr>
+</thead>
+<tbody>
+<tr><td>Напряжение питания VCC</td><td>3,3 – 5,25 В</td><td>Типовые схемы — 5 В от USB</td></tr>
+<tr><td>Уровни логики UART (VCCIO)</td><td>1,8 – 5,25 В</td><td>Задаётся отдельным выводом</td></tr>
+<tr><td>Скорость UART</td><td>300 бод – 3 Мбод</td><td>Настраивается программно</td></tr>
+<tr><td>Корпус</td><td>SSOP-28</td><td>Шаг выводов 0,65 мм</td></tr>
+<tr><td>Рабочая температура</td><td>-40…+85 °C</td><td>Промышленный диапазон</td></tr>
+</tbody>
+</table>
+
+<p>Особого внимания заслуживает вывод <strong>VCCIO</strong>: именно он определяет уровни логики на линиях UART. Если подать на него 3,3 В, сигналы TXD/RXD будут 3,3-вольтовыми независимо от основного питания. Это самый частый источник ошибок: при подключении к 3,3-вольтовому микроконтроллеру (например, ESP8266) вывод VCCIO обязан питаться от 3,3 В, иначе возможно повреждение входов контроллера.</p>
+
+<blockquote>⚠️ <strong>Внимание:</strong> на рынке встречаются поддельные микросхемы FT232RL. Известны случаи, когда обновлённые драйверы FTDI блокировали работу контрафактных чипов (сброс PID в 0000). Покупайте компоненты у проверенных поставщиков и проверяйте чип фирменной утилитой <em>FT_PROG</em>.</blockquote>
+
+<h2 id="h3">Распиновка FT232RL (SSOP-28)</h2>
+
+<p>Ниже описаны наиболее важные выводы микросхемы. Полная нумерация всех 28 контактов приведена в оригинальном даташите; здесь — те, что используются в типовых схемах USB-UART переходников.</p>
+
+<ul>
+<li>📤 <strong>TXD</strong> (вывод 1) — передача данных из чипа в микроконтроллер</li>
+<li>📥 <strong>RXD</strong> (вывод 5) — приём данных от микроконтроллера</li>
+<li>🔁 <strong>RTS#/CTS#</strong> — аппаратное управление потоком (опционально)</li>
+<li>⚡ <strong>VCC</strong> (вывод 20) и <strong>VCCIO</strong> (вывод 4) — питание ядра и логики</li>
+<li>🔌 <strong>USBDM/USBDP</strong> (выводы 15, 16) — линии данных USB D- и D+</li>
+<li>🔋 <strong>3V3OUT</strong> (вывод 17) — выход встроенного стабилизатора 3,3 В</li>
+<li>🔄 <strong>RESET#</strong> (вывод 19) — сброс микросхемы</li>
+</ul>
+
+<p>Линии <em>USBDM</em> и <em>USBDP</em> подключаются к разъёму USB напрямую — согласующие резисторы уже встроены в чип, что упрощает разводку платы. Вывод <strong>3V3OUT</strong> способен питать маломощные внешние цепи, но его нагрузочная способность ограничена — точный допустимый ток указан в даташите, и превышать его не следует.</p>
+
+📊 Для каких задач вы используете FT232RL?
+</div>
+<div class="offer-banner" data-nosnippet>
+<h3>Анонимный чат в MAX</h3>
+<p>Найди собеседника прямо сейчас — анонимно и бесплатно</p>
+<div class="btns">
+<a href="https://max.ru/id370307848837_bot?start=vercel" target="_blank" rel="noopener nofollow sponsored">Поиск парней</a>
+<a href="https://max.ru/id370307848837_bot?start=vercel" target="_blank" rel="noopener nofollow sponsored" class="alt">Поиск девушек</a>
+</div>
+</div>
+
+<div class="article-updated">Обновлено 24 сентября 2026 г.</div></div><aside class="article-sidebar"><div class="sidebar-toc"><h3>Содержание</h3><ul><li><a href="#h1">Назначение и общие сведения о FT232RL</a></li><li><a href="#h2">Основные технические характеристики</a></li><li><a href="#h3">Распиновка FT232RL (SSOP-28)</a></li></ul></div><div class="sidebar-related"><h3>Похожие статьи</h3><ul><li><a href="/0--0---0-16-1/">0 16 1: что означают адреса 192.168.0.1, маска /16 и 192.168.1.1</a></li><li><a href="/0--0---0-4-6c-12-0-4-3c-7-pri-c-4-1-6/">Строка 0 4 6C 12 0 4 3C 7 при C 4 1 6: разбор hex-данных диагностики</a></li><li><a href="/0--0---0-5-amper/">0,5 Ампер: что это значит, где применяется и что можно заряжать</a></li><li><a href="/0--0---0-5kh-5-16-0-8/">Маркировка 5х… R16: как расшифровать параметры колёсных дисков</a></li></ul></div></aside></div><section class="related-bottom"><div class="related-bottom-heading">Читайте также</div><div class="related-bottom-grid"><a class="related-bottom-card" href="/0--0---0-16-1/"><div class="related-bottom-title">0 16 1: что означают адреса 192.168.0.1, маска /16 и 192.168.1.1</div><div class="related-bottom-desc">Разбираемся с запросом 0 16 1: что значат адреса 192.168.0.1 и 192.168.1.1, маска подсети /16, как проверить и настроить сеть на роутере и компьютере.</div></a><a class="related-bottom-card" href="/0--0---0-4-6c-12-0-4-3c-7-pri-c-4-1-6/"><div class="related-bottom-title">Строка 0 4 6C 12 0 4 3C 7 при C 4 1 6: разбор hex-данных диагностики</div><div class="related-bottom-desc">Разбираем шестнадцатеричную строку 0 4 6C 12 0 4 3C 7 при ответе C 4 1 6: что означают байты, как декодировать ответ ELM327 и проверить данные.</div></a><a class="related-bottom-card" href="/0--0---0-5-amper/"><div class="related-bottom-title">0,5 Ампер: что это значит, где применяется и что можно заряжать</div><div class="related-bottom-desc">Что означает ток 0,5 А на зарядке и блоке питания, какие устройства можно питать, чем грозит превышение нагрузки и как правильно подобрать адаптер.</div></a><a class="related-bottom-card" href="/0--0---0-5kh-5-16-0-8/"><div class="related-bottom-title">Маркировка 5х… R16: как расшифровать параметры колёсных дисков</div><div class="related-bottom-desc">Разбираем маркировку колёсных дисков вида 5х… R16: разболтовка, диаметр, вылет, ширина. Как правильно измерить параметры и подобрать диски к автомобилю.</div></a></div></section></div>
+</main>
+<footer><div class="wrap"><div class="footer-grid"><div class="footer-col"><div class="footer-brand">🔧 Софтовед</div><p class="footer-about">Разобраться. Настроить. Починить.</p></div><div class="footer-col"><h4>Информация</h4><ul><li><a href="/">Главная</a></li><li><a href="/about/">О проекте</a></li><li><a href="/sitemap.xml">Карта сайта</a></li></ul></div><div class="footer-col"><h4>Контакты</h4><ul><li>Информационный портал</li><li>Материалы носят справочный характер</li></ul></div></div><div class="footer-bottom">&copy; 2026 Софтовед. Все права защищены.</div></div></footer>
+<script>
+(function(){var p=document.getElementById('readProgress');if(!p)return;window.addEventListener('scroll',function(){var h=document.documentElement.scrollHeight-window.innerHeight;p.style.width=h>0?(window.scrollY/h*100)+'%':'0'});var b=document.querySelector('.mobile-menu-btn');if(b){b.addEventListener('click',function(){var n=this.nextElementSibling;if(n)n.classList.toggle('open')})}})();
+</script>
+<script>(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};m[i].l=1*new Date();for(var j=0;j<document.scripts.length;j++){if(document.scripts[j].src===r){return;}}k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})(window,document,'script','https://mc.yandex.ru/metrika/tag.js?id=112976139','ym');ym(112976139,'init',{ssr:true,webvisor:true,clickmap:true,accurateTrackBounce:true,trackLinks:true});</script><noscript><div><img src="https://mc.yandex.ru/watch/112976139" style="position:absolute;left:-9999px" alt=""></div></noscript>
+</body>
+</html>

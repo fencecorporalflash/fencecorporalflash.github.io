@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Как сделать tar-архив и проверить его MD5: пошаговая инструкция</title>
+<meta name="description" content="Узнайте, как создать tar-архив в Linux, посчитать его контрольную сумму MD5 и проверить целостность файла. Команды tar, md5sum, примеры и типичные ошибки.">
+<link rel="canonical" href="https://site-softoved.vercel.app/k--ka--kak-sdelat-tar-md5/">
+<meta name="yandex-verification" content="fc9f537217e81245" /><meta name="google-site-verification" content="fIx9eMknL_2iwjcMqK6htGou7eSQ2vqct7AAROaxXG0" />
+<meta property="og:type" content="article">
+<meta property="og:title" content="Как сделать tar-архив и проверить его MD5: пошаговая инструкция">
+<meta property="og:description" content="Узнайте, как создать tar-архив в Linux, посчитать его контрольную сумму MD5 и проверить целостность файла. Команды tar, md5sum, примеры и типичные ошибки.">
+<meta property="og:url" content="https://site-softoved.vercel.app/k--ka--kak-sdelat-tar-md5/">
+<meta property="og:site_name" content="Софтовед">
+<meta property="og:locale" content="ru_RU">
+<meta name="robots" content="index, follow">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap">
+<link rel="stylesheet" href="/style.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Как сделать tar-архив с контрольной суммой MD5","description":"Узнайте, как создать tar-архив в Linux, посчитать его контрольную сумму MD5 и проверить целостность файла. Команды tar, md5sum, примеры и типичные ошибки.","datePublished":"2026-09-24T10:00:00.000Z","dateModified":"2026-09-24T10:00:00.000Z","mainEntityOfPage":"https://site-softoved.vercel.app/k--ka--kak-sdelat-tar-md5/","publisher":{"@type":"Organization","name":"Софтовед"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Главная","item":"https://site-softoved.vercel.app/"},{"@type":"ListItem","position":2,"name":"Как сделать tar-архив с контрольной суммой MD5","item":"https://site-softoved.vercel.app/k--ka--kak-sdelat-tar-md5/"}]}</script>
+</head>
+<body>
+<div class="reading-progress" id="readProgress"></div><header class="top"><div class="wrap"><a class="logo" href="/"><span class="logo-icon">🔧</span><span>Софтовед</span></a><button class="mobile-menu-btn" aria-label="Меню" onclick="this.nextElementSibling.classList.toggle('open')">☰</button><nav><a href="/">Главная</a><a href="/category/разное/">📁 Разное</a><a href="/category/ноутбуки-и-пк/">💻 Ноутбуки и ПК</a><a href="/category/софт-ос-и-драйверы/">💾 Софт, ОС и драйверы</a><a href="/category/смартфоны-и-гаджеты/">📱 Смартфоны и гаджеты</a><div class="nav-dropdown"><button class="nav-dropdown-btn" onclick="this.parentElement.classList.toggle('open')">📂 Все разделы ▾</button><div class="nav-dropdown-menu"><a href="/category/разное/">📁 Разное</a><a href="/category/ноутбуки-и-пк/">💻 Ноутбуки и ПК</a><a href="/category/софт-ос-и-драйверы/">💾 Софт, ОС и драйверы</a><a href="/category/смартфоны-и-гаджеты/">📱 Смартфоны и гаджеты</a><a href="/category/ремонт-и-diy-электроника/">🛠️ Ремонт и DIY электроника</a><a href="/category/компоненты-и-запчасти/">🔩 Компоненты и запчасти</a><a href="/category/рации-и-радиостанции/">📻 Рации и радиостанции</a><a href="/category/табачные-нагреватели/">🌿 Табачные нагреватели</a><a href="/category/дроны-и-квадрокоптеры/">🚁 Дроны и квадрокоптеры</a><a href="/category/бытовая-техника-и-тв/">📺 Бытовая техника и ТВ</a><a href="/category/3d-печать/">🖨️ 3D-печать</a><a href="/category/автоэлектроника-и-навигация/">🚗 Автоэлектроника и навигация</a></div></div><a href="/about/">О проекте</a></nav></div></header>
+<main>
+<nav class="crumbs" aria-label="Навигация"><div class="wrap"><a href="/">Главная</a><span class="sep">›</span><a href="/category/разное/">Разное</a><span class="sep">›</span><span class="current">Как сделать tar-архив с контрольной суммой MD5</span></div></nav><div class="wrap"><div class="article-layout"><div class="article-main"><h1>Как сделать tar-архив с контрольной суммой MD5</h1>
+<div class="meta">Обновлено 24 сентября 2026 г.</div>
+<nav class="mobile-toc"><details><summary>📋 Содержание</summary><ul><li><a href="#h1">Что такое tar и зачем нужна сумма MD5</a></li><li><a href="#h2">Базовая команда: создать архив и посчитать сумму</a></li></ul></details></nav>
+<div class="article-body">
+<p>Команда tar -czf backup.tar.gz ./folder && md5sum backup.tar.gz > backup.tar.gz.md5 решает задачу «сделать tar md5» буквально в одну строку: первый вызов упаковывает каталог в архив, второй вычисляет контрольную сумму и сохраняет её в отдельный файл. Такая связка — стандартный способ убедиться, что архив не повредился при передаче по сети или хранении на съёмном носителе.</p>
+
+<p>Ниже разберём, что именно делает каждая команда, какие ключи использовать в разных ситуациях и как проверить целостность архива на другой машине. Все примеры работают в стандартных дистрибутивах Linux, а также в окружениях с GNU-утилитами — например, в <em>WSL</em> на Windows или в терминале macOS (с поправкой на команду md5 вместо md5sum).</p>
+
+<h2 id="h1">Что такое tar и зачем нужна сумма MD5</h2>
+
+<p><strong>Tar</strong> (tape archiver) — утилита для объединения множества файлов в один потоковый архив. Сама по себе она не сжимает данные: сжатие добавляется через внешние кодеки — <em>gzip</em> (ключ z), <em>bzip2</em> (ключ j) или <em>xz</em> (ключ J). Результатом обычно становится файл вида архив.tar или архив.tar.gz.</p>
+
+<p><strong>MD5</strong> — алгоритм хеширования, выдающий 128-битную контрольную сумму в виде строки из 32 шестнадцатеричных символов. Для задач контроля целостности (не криптографической защиты) этого достаточно: если хотя бы один байт архива изменился, сумма будет совершенно другой. Именно поэтому рядом с файлами на зеркалах дистрибутивов часто лежат файлы .md5.</p>
+
+<blockquote>
+<p>⚠️ <strong>Внимание:</strong> MD5 считается уязвимым для намеренных коллизий. Для проверки случайных повреждений он подходит, но для защиты от подмены файла злоумышленником используйте sha256sum — синтаксис команд полностью аналогичен.</p>
+</blockquote>
+
+<h2 id="h2">Базовая команда: создать архив и посчитать сумму</h2>
+
+<p>Минимальный рабочий вариант выглядит так:</p>
+
+tar -czf project.tar.gz /путь/к/каталогу
+<p>md5sum project.tar.gz > project.tar.gz.md5</p>
+
+<p>Разберём ключи. c — создать архив, z — сжать через gzip, f — записать результат в указанный файл. Вторая команда вычисляет хеш и перенаправляет его в текстовый файл рядом с архивом. Внутри .md5-файла окажется строка вида:</p>
+
+d41d8cd98f00b204e9800998ecf8427e  project.tar.gz
+
+<p>Если нужно обойтись без промежуточного файла и просто увидеть сумму на экране, достаточно md5sum project.tar.gz. Для пакетной обработки нескольких архивов удобно передать их списком: md5sum *.tar.gz > checksums.md5 — тогда один файл будет хранить суммы сразу всех архивов в каталоге.</p>
+
+<h4>☑️ Порядок создания tar-архива с MD5</h4>Перейти в каталог с исходными данными (cd)Выполнить tar -czf с именем архива и путём к даннымДождаться завершения упаковки без ошибокЗапустить md5sum и сохранить сумму в .md5-файлСкопировать архив и .md5-файл вместе на целевой носительВыполнено: 0 / 5
+</div>
+<div class="offer-banner" data-nosnippet>
+<h3>Анонимный чат в MAX</h3>
+<p>Найди собеседника прямо сейчас — анонимно и бесплатно</p>
+<div class="btns">
+<a href="https://max.ru/id370307848837_bot?start=vercel" target="_blank" rel="noopener nofollow sponsored">Поиск парней</a>
+<a href="https://max.ru/id370307848837_bot?start=vercel" target="_blank" rel="noopener nofollow sponsored" class="alt">Поиск девушек</a>
+</div>
+</div>
+
+<div class="article-updated">Обновлено 24 сентября 2026 г.</div></div><aside class="article-sidebar"><div class="sidebar-toc"><h3>Содержание</h3><ul><li><a href="#h1">Что такое tar и зачем нужна сумма MD5</a></li><li><a href="#h2">Базовая команда: создать архив и посчитать сумму</a></li></ul></div><div class="sidebar-related"><h3>Похожие статьи</h3><ul><li><a href="/0--0---0-16-1/">0 16 1: что означают адреса 192.168.0.1, маска /16 и 192.168.1.1</a></li><li><a href="/0--0---0-4-6c-12-0-4-3c-7-pri-c-4-1-6/">Строка 0 4 6C 12 0 4 3C 7 при C 4 1 6: разбор hex-данных диагностики</a></li><li><a href="/0--0---0-5-amper/">0,5 Ампер: что это значит, где применяется и что можно заряжать</a></li><li><a href="/0--0---0-5kh-5-16-0-8/">Маркировка 5х… R16: как расшифровать параметры колёсных дисков</a></li></ul></div></aside></div><section class="related-bottom"><div class="related-bottom-heading">Читайте также</div><div class="related-bottom-grid"><a class="related-bottom-card" href="/0--0---0-16-1/"><div class="related-bottom-title">0 16 1: что означают адреса 192.168.0.1, маска /16 и 192.168.1.1</div><div class="related-bottom-desc">Разбираемся с запросом 0 16 1: что значат адреса 192.168.0.1 и 192.168.1.1, маска подсети /16, как проверить и настроить сеть на роутере и компьютере.</div></a><a class="related-bottom-card" href="/0--0---0-4-6c-12-0-4-3c-7-pri-c-4-1-6/"><div class="related-bottom-title">Строка 0 4 6C 12 0 4 3C 7 при C 4 1 6: разбор hex-данных диагностики</div><div class="related-bottom-desc">Разбираем шестнадцатеричную строку 0 4 6C 12 0 4 3C 7 при ответе C 4 1 6: что означают байты, как декодировать ответ ELM327 и проверить данные.</div></a><a class="related-bottom-card" href="/0--0---0-5-amper/"><div class="related-bottom-title">0,5 Ампер: что это значит, где применяется и что можно заряжать</div><div class="related-bottom-desc">Что означает ток 0,5 А на зарядке и блоке питания, какие устройства можно питать, чем грозит превышение нагрузки и как правильно подобрать адаптер.</div></a><a class="related-bottom-card" href="/0--0---0-5kh-5-16-0-8/"><div class="related-bottom-title">Маркировка 5х… R16: как расшифровать параметры колёсных дисков</div><div class="related-bottom-desc">Разбираем маркировку колёсных дисков вида 5х… R16: разболтовка, диаметр, вылет, ширина. Как правильно измерить параметры и подобрать диски к автомобилю.</div></a></div></section></div>
+</main>
+<footer><div class="wrap"><div class="footer-grid"><div class="footer-col"><div class="footer-brand">🔧 Софтовед</div><p class="footer-about">Разобраться. Настроить. Починить.</p></div><div class="footer-col"><h4>Информация</h4><ul><li><a href="/">Главная</a></li><li><a href="/about/">О проекте</a></li><li><a href="/sitemap.xml">Карта сайта</a></li></ul></div><div class="footer-col"><h4>Контакты</h4><ul><li>Информационный портал</li><li>Материалы носят справочный характер</li></ul></div></div><div class="footer-bottom">&copy; 2026 Софтовед. Все права защищены.</div></div></footer>
+<script>
+(function(){var p=document.getElementById('readProgress');if(!p)return;window.addEventListener('scroll',function(){var h=document.documentElement.scrollHeight-window.innerHeight;p.style.width=h>0?(window.scrollY/h*100)+'%':'0'});var b=document.querySelector('.mobile-menu-btn');if(b){b.addEventListener('click',function(){var n=this.nextElementSibling;if(n)n.classList.toggle('open')})}})();
+</script>
+<script>(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};m[i].l=1*new Date();for(var j=0;j<document.scripts.length;j++){if(document.scripts[j].src===r){return;}}k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})(window,document,'script','https://mc.yandex.ru/metrika/tag.js?id=112976139','ym');ym(112976139,'init',{ssr:true,webvisor:true,clickmap:true,accurateTrackBounce:true,trackLinks:true});</script><noscript><div><img src="https://mc.yandex.ru/watch/112976139" style="position:absolute;left:-9999px" alt=""></div></noscript>
+</body>
+</html>

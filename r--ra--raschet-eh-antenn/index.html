@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Расчет EH-антенн: формулы, настройка и практические советы</title>
+<meta name="description" content="Подробное руководство по расчету EH-антенн: принцип работы, формулы длины цилиндров, выбор диаметра, схемы согласования, настройка и типичные ошибки при постройке.">
+<link rel="canonical" href="https://site-softoved.vercel.app/r--ra--raschet-eh-antenn/">
+<meta name="yandex-verification" content="fc9f537217e81245" /><meta name="google-site-verification" content="fIx9eMknL_2iwjcMqK6htGou7eSQ2vqct7AAROaxXG0" />
+<meta property="og:type" content="article">
+<meta property="og:title" content="Расчет EH-антенн: формулы, настройка и практические советы">
+<meta property="og:description" content="Подробное руководство по расчету EH-антенн: принцип работы, формулы длины цилиндров, выбор диаметра, схемы согласования, настройка и типичные ошибки при постройке.">
+<meta property="og:url" content="https://site-softoved.vercel.app/r--ra--raschet-eh-antenn/">
+<meta property="og:site_name" content="Софтовед">
+<meta property="og:locale" content="ru_RU">
+<meta name="robots" content="index, follow">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap">
+<link rel="stylesheet" href="/style.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Расчет EH-антенн: теория, формулы и практика настройки","description":"Подробное руководство по расчету EH-антенн: принцип работы, формулы длины цилиндров, выбор диаметра, схемы согласования, настройка и типичные ошибки при постройке.","datePublished":"2026-09-24T10:00:00.000Z","dateModified":"2026-09-24T10:00:00.000Z","mainEntityOfPage":"https://site-softoved.vercel.app/r--ra--raschet-eh-antenn/","publisher":{"@type":"Organization","name":"Софтовед"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Главная","item":"https://site-softoved.vercel.app/"},{"@type":"ListItem","position":2,"name":"Расчет EH-антенн: теория, формулы и практика настройки","item":"https://site-softoved.vercel.app/r--ra--raschet-eh-antenn/"}]}</script>
+</head>
+<body>
+<div class="reading-progress" id="readProgress"></div><header class="top"><div class="wrap"><a class="logo" href="/"><span class="logo-icon">🔧</span><span>Софтовед</span></a><button class="mobile-menu-btn" aria-label="Меню" onclick="this.nextElementSibling.classList.toggle('open')">☰</button><nav><a href="/">Главная</a><a href="/category/разное/">📁 Разное</a><a href="/category/ноутбуки-и-пк/">💻 Ноутбуки и ПК</a><a href="/category/софт-ос-и-драйверы/">💾 Софт, ОС и драйверы</a><a href="/category/смартфоны-и-гаджеты/">📱 Смартфоны и гаджеты</a><div class="nav-dropdown"><button class="nav-dropdown-btn" onclick="this.parentElement.classList.toggle('open')">📂 Все разделы ▾</button><div class="nav-dropdown-menu"><a href="/category/разное/">📁 Разное</a><a href="/category/ноутбуки-и-пк/">💻 Ноутбуки и ПК</a><a href="/category/софт-ос-и-драйверы/">💾 Софт, ОС и драйверы</a><a href="/category/смартфоны-и-гаджеты/">📱 Смартфоны и гаджеты</a><a href="/category/ремонт-и-diy-электроника/">🛠️ Ремонт и DIY электроника</a><a href="/category/компоненты-и-запчасти/">🔩 Компоненты и запчасти</a><a href="/category/рации-и-радиостанции/">📻 Рации и радиостанции</a><a href="/category/табачные-нагреватели/">🌿 Табачные нагреватели</a><a href="/category/дроны-и-квадрокоптеры/">🚁 Дроны и квадрокоптеры</a><a href="/category/бытовая-техника-и-тв/">📺 Бытовая техника и ТВ</a><a href="/category/3d-печать/">🖨️ 3D-печать</a><a href="/category/автоэлектроника-и-навигация/">🚗 Автоэлектроника и навигация</a></div></div><a href="/about/">О проекте</a></nav></div></header>
+<main>
+<nav class="crumbs" aria-label="Навигация"><div class="wrap"><a href="/">Главная</a><span class="sep">›</span><a href="/category/разное/">Разное</a><span class="sep">›</span><span class="current">Расчет EH-антенн: теория, формулы и практика настройки</span></div></nav><div class="wrap"><div class="article-layout"><div class="article-main"><h1>Расчет EH-антенн: теория, формулы и практика настройки</h1>
+<div class="meta">Обновлено 24 сентября 2026 г.</div>
+<nav class="mobile-toc"><details><summary>📋 Содержание</summary><ul><li><a href="#h1">Как работает EH-антенна и почему расчет критичен</a></li><li><a href="#h2">Исходные данные для расчета</a></li><li><a href="#h3">Расчет размеров цилиндров и зазора</a></li></ul></details></nav>
+<div class="article-body">
+<p>Расчет EH-антенны начинается не с формул, а с проверки геометрии: если длина цилиндров и зазор между ними выбраны наугад, антенна либо не настроится в резонанс, либо покажет КСВ, который невозможно выправить никаким согласующим контуром. Именно ошибка в соотношении диаметра цилиндров к рабочей частоте — самая частая причина, по которой самодельная <strong>EH-антенна</strong> «не работает», хотя схема собрана верно.</p>
+
+<p>EH-антенна (от английского <em>Electric-Magnetic</em> — антенна с одновременным излучением электрического и магнитного полей) привлекает радиолюбителей компактностью: при корректном расчете ее высота может составлять малую долю длины волны, что критично для диапазонов 160 и 80 метров. Ниже разберем, как выполнить расчет под конкретную частоту, какие параметры влияют на резонанс и как настроить готовую конструкцию.</p>
+
+<h2 id="h1">Как работает EH-антенна и почему расчет критичен</h2>
+
+<p>В классической конструкции EH-антенны используются два коаксиальных цилиндра, разделенные узким зазором. Питание подается через согласующую катушку индуктивности, а связь между цилиндрами создает условия, при которых электрическое и магнитное поля формируются в фазе — отсюда и название. Подробное теоретическое обоснование принципа до сих пор вызывает дискуссии в радиолюбительском сообществе, поэтому относитесь к громким заявлениям о «революционной эффективности» с осторожностью.</p>
+
+<p>Практический вывод из теории прост: размеры цилиндров, ширина зазора и параметры катушки связаны между собой. Изменение одного параметра требует пересчета остальных, иначе антенна уйдет с резонанса.</p>
+
+<ul>
+<li>📏 <strong>Длина цилиндров</strong> — определяет электрическую длину излучающей части.</li>
+<li>⚡ <strong>Зазор между цилиндрами</strong> — влияет на емкость связи и полосу пропускания.</li>
+<li>🔩 <strong>Диаметр цилиндров</strong> — задает характеристическое сопротивление и широкополосность.</li>
+<li>🧲 <strong>Индуктивность катушки</strong> — согласует антенну с фидером 50 Ом.</li>
+</ul>
+
+<h2 id="h2">Исходные данные для расчета</h2>
+
+<p>Перед началом расчета определите рабочий диапазон и доступные материалы. Вам понадобится знать центральную частоту, диаметр трубы (обычно алюминиевой или медной), которую реально достать, и желаемую высоту конструкции.</p>
+
+<p>Базовая формула, от которой отталкиваются в любительских методиках, — пересчет частоты в длину волны: λ = 300 / f, где f — частота в МГц, λ — длина волны в метрах. Для диапазона 40 метров (7,1 МГц) получаем λ ≈ 42,3 м. Размеры EH-антенны составляют малую долю этой величины — в этом и состоит ее главное преимущество перед полноразмерным диполем.</p>
+
+<blockquote>⚠️ <strong>Внимание:</strong> в открытых источниках встречаются разные методики расчета EH-антенн с разными эмпирическими коэффициентами. Результаты могут заметно отличаться, поэтому готовую конструкцию обязательно проверяйте измерителем КСВ или антенным анализатором, а не доверяйте расчету «на бумаге».</blockquote>
+
+<h2 id="h3">Расчет размеров цилиндров и зазора</h2>
+
+<p>В распространенных любительских методиках суммарная длина двух цилиндров выбирается как небольшая доля длины волны, а зазор между ними — порядка одного диаметра цилиндра или меньше. Точные коэффициенты зависят от конкретной методики, поэтому разумный подход — рассчитать стартовую геометрию, а затем подгонять резонанс механически, изменяя длину или положение элементов.</p>
+
+<p>Для ориентировочной прикидки используйте следующую логику:</p>
+
+<ul>
+<li>📐 Вычислите длину волны по формуле λ = 300 / f.</li>
+<li>🔧 Примите суммарную длину цилиндров как долю λ согласно выбранной методике.</li>
+<li>📏 Разделите длину поровну между верхним и нижним цилиндром.</li>
+<li>⚙️ Установите начальный зазор около одного диаметра трубы — дальше он корректируется при настройке.</li>
+</ul>
+
+<p>Чем больше диаметр цилиндров, тем шире полоса пропускания антенны и тем проще настройка. Тонкие трубы дают узкую полосу и высокую добротность, что затрудняет работу в пределах всего диапазона без подстройки.</p>
+
+💡<p>Если точная методика расчета вызывает сомнения, начните с размеров, рассчитанных для чуть более низкой частоты, чем нужно: укоротить цилиндры при настройке проще, чем наращивать.</p>
+</div>
+<div class="offer-banner" data-nosnippet>
+<h3>Анонимный чат в MAX</h3>
+<p>Найди собеседника прямо сейчас — анонимно и бесплатно</p>
+<div class="btns">
+<a href="https://max.ru/id370307848837_bot?start=vercel" target="_blank" rel="noopener nofollow sponsored">Поиск парней</a>
+<a href="https://max.ru/id370307848837_bot?start=vercel" target="_blank" rel="noopener nofollow sponsored" class="alt">Поиск девушек</a>
+</div>
+</div>
+
+<div class="article-updated">Обновлено 24 сентября 2026 г.</div></div><aside class="article-sidebar"><div class="sidebar-toc"><h3>Содержание</h3><ul><li><a href="#h1">Как работает EH-антенна и почему расчет критичен</a></li><li><a href="#h2">Исходные данные для расчета</a></li><li><a href="#h3">Расчет размеров цилиндров и зазора</a></li></ul></div><div class="sidebar-related"><h3>Похожие статьи</h3><ul><li><a href="/0--0---0-16-1/">0 16 1: что означают адреса 192.168.0.1, маска /16 и 192.168.1.1</a></li><li><a href="/0--0---0-4-6c-12-0-4-3c-7-pri-c-4-1-6/">Строка 0 4 6C 12 0 4 3C 7 при C 4 1 6: разбор hex-данных диагностики</a></li><li><a href="/0--0---0-5-amper/">0,5 Ампер: что это значит, где применяется и что можно заряжать</a></li><li><a href="/0--0---0-5kh-5-16-0-8/">Маркировка 5х… R16: как расшифровать параметры колёсных дисков</a></li></ul></div></aside></div><section class="related-bottom"><div class="related-bottom-heading">Читайте также</div><div class="related-bottom-grid"><a class="related-bottom-card" href="/0--0---0-16-1/"><div class="related-bottom-title">0 16 1: что означают адреса 192.168.0.1, маска /16 и 192.168.1.1</div><div class="related-bottom-desc">Разбираемся с запросом 0 16 1: что значат адреса 192.168.0.1 и 192.168.1.1, маска подсети /16, как проверить и настроить сеть на роутере и компьютере.</div></a><a class="related-bottom-card" href="/0--0---0-4-6c-12-0-4-3c-7-pri-c-4-1-6/"><div class="related-bottom-title">Строка 0 4 6C 12 0 4 3C 7 при C 4 1 6: разбор hex-данных диагностики</div><div class="related-bottom-desc">Разбираем шестнадцатеричную строку 0 4 6C 12 0 4 3C 7 при ответе C 4 1 6: что означают байты, как декодировать ответ ELM327 и проверить данные.</div></a><a class="related-bottom-card" href="/0--0---0-5-amper/"><div class="related-bottom-title">0,5 Ампер: что это значит, где применяется и что можно заряжать</div><div class="related-bottom-desc">Что означает ток 0,5 А на зарядке и блоке питания, какие устройства можно питать, чем грозит превышение нагрузки и как правильно подобрать адаптер.</div></a><a class="related-bottom-card" href="/0--0---0-5kh-5-16-0-8/"><div class="related-bottom-title">Маркировка 5х… R16: как расшифровать параметры колёсных дисков</div><div class="related-bottom-desc">Разбираем маркировку колёсных дисков вида 5х… R16: разболтовка, диаметр, вылет, ширина. Как правильно измерить параметры и подобрать диски к автомобилю.</div></a></div></section></div>
+</main>
+<footer><div class="wrap"><div class="footer-grid"><div class="footer-col"><div class="footer-brand">🔧 Софтовед</div><p class="footer-about">Разобраться. Настроить. Починить.</p></div><div class="footer-col"><h4>Информация</h4><ul><li><a href="/">Главная</a></li><li><a href="/about/">О проекте</a></li><li><a href="/sitemap.xml">Карта сайта</a></li></ul></div><div class="footer-col"><h4>Контакты</h4><ul><li>Информационный портал</li><li>Материалы носят справочный характер</li></ul></div></div><div class="footer-bottom">&copy; 2026 Софтовед. Все права защищены.</div></div></footer>
+<script>
+(function(){var p=document.getElementById('readProgress');if(!p)return;window.addEventListener('scroll',function(){var h=document.documentElement.scrollHeight-window.innerHeight;p.style.width=h>0?(window.scrollY/h*100)+'%':'0'});var b=document.querySelector('.mobile-menu-btn');if(b){b.addEventListener('click',function(){var n=this.nextElementSibling;if(n)n.classList.toggle('open')})}})();
+</script>
+<script>(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};m[i].l=1*new Date();for(var j=0;j<document.scripts.length;j++){if(document.scripts[j].src===r){return;}}k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})(window,document,'script','https://mc.yandex.ru/metrika/tag.js?id=112976139','ym');ym(112976139,'init',{ssr:true,webvisor:true,clickmap:true,accurateTrackBounce:true,trackLinks:true});</script><noscript><div><img src="https://mc.yandex.ru/watch/112976139" style="position:absolute;left:-9999px" alt=""></div></noscript>
+</body>
+</html>

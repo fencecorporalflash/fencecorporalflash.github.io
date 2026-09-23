@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Extensible Firmware Interface (EFI/UEFI): что это и как работает</title>
+<meta name="description" content="Extensible Firmware Interface — что это за интерфейс, чем UEFI отличается от BIOS, как работает загрузка, раздел ESP и настройка прошивки на ПК и ноутбуках.">
+<link rel="canonical" href="https://site-softoved.vercel.app/e--ex--extensible-firmware-interface/">
+<meta name="yandex-verification" content="fc9f537217e81245" /><meta name="google-site-verification" content="fIx9eMknL_2iwjcMqK6htGou7eSQ2vqct7AAROaxXG0" />
+<meta property="og:type" content="article">
+<meta property="og:title" content="Extensible Firmware Interface (EFI/UEFI): что это и как работает">
+<meta property="og:description" content="Extensible Firmware Interface — что это за интерфейс, чем UEFI отличается от BIOS, как работает загрузка, раздел ESP и настройка прошивки на ПК и ноутбуках.">
+<meta property="og:url" content="https://site-softoved.vercel.app/e--ex--extensible-firmware-interface/">
+<meta property="og:site_name" content="Софтовед">
+<meta property="og:locale" content="ru_RU">
+<meta name="robots" content="index, follow">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap">
+<link rel="stylesheet" href="/style.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Extensible Firmware Interface: устройство, отличия от BIOS и настройка","description":"Extensible Firmware Interface — что это за интерфейс, чем UEFI отличается от BIOS, как работает загрузка, раздел ESP и настройка прошивки на ПК и ноутбуках.","datePublished":"2026-09-24T10:00:00.000Z","dateModified":"2026-09-24T10:00:00.000Z","mainEntityOfPage":"https://site-softoved.vercel.app/e--ex--extensible-firmware-interface/","publisher":{"@type":"Organization","name":"Софтовед"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Главная","item":"https://site-softoved.vercel.app/"},{"@type":"ListItem","position":2,"name":"Extensible Firmware Interface: устройство, отличия от BIOS и настройка","item":"https://site-softoved.vercel.app/e--ex--extensible-firmware-interface/"}]}</script>
+</head>
+<body>
+<div class="reading-progress" id="readProgress"></div><header class="top"><div class="wrap"><a class="logo" href="/"><span class="logo-icon">🔧</span><span>Софтовед</span></a><button class="mobile-menu-btn" aria-label="Меню" onclick="this.nextElementSibling.classList.toggle('open')">☰</button><nav><a href="/">Главная</a><a href="/category/разное/">📁 Разное</a><a href="/category/ноутбуки-и-пк/">💻 Ноутбуки и ПК</a><a href="/category/софт-ос-и-драйверы/">💾 Софт, ОС и драйверы</a><a href="/category/смартфоны-и-гаджеты/">📱 Смартфоны и гаджеты</a><div class="nav-dropdown"><button class="nav-dropdown-btn" onclick="this.parentElement.classList.toggle('open')">📂 Все разделы ▾</button><div class="nav-dropdown-menu"><a href="/category/разное/">📁 Разное</a><a href="/category/ноутбуки-и-пк/">💻 Ноутбуки и ПК</a><a href="/category/софт-ос-и-драйверы/">💾 Софт, ОС и драйверы</a><a href="/category/смартфоны-и-гаджеты/">📱 Смартфоны и гаджеты</a><a href="/category/ремонт-и-diy-электроника/">🛠️ Ремонт и DIY электроника</a><a href="/category/компоненты-и-запчасти/">🔩 Компоненты и запчасти</a><a href="/category/рации-и-радиостанции/">📻 Рации и радиостанции</a><a href="/category/табачные-нагреватели/">🌿 Табачные нагреватели</a><a href="/category/дроны-и-квадрокоптеры/">🚁 Дроны и квадрокоптеры</a><a href="/category/бытовая-техника-и-тв/">📺 Бытовая техника и ТВ</a><a href="/category/3d-печать/">🖨️ 3D-печать</a><a href="/category/автоэлектроника-и-навигация/">🚗 Автоэлектроника и навигация</a></div></div><a href="/about/">О проекте</a></nav></div></header>
+<main>
+<nav class="crumbs" aria-label="Навигация"><div class="wrap"><a href="/">Главная</a><span class="sep">›</span><a href="/category/софт-ос-и-драйверы/">Софт, ОС и драйверы</a><span class="sep">›</span><span class="current">Extensible Firmware Interface: устройство, отличия от BIOS и настройка</span></div></nav><div class="wrap"><div class="article-layout"><div class="article-main"><h1>Extensible Firmware Interface: устройство, отличия от BIOS и настройка</h1>
+<div class="meta">Обновлено 24 сентября 2026 г.</div>
+<nav class="mobile-toc"><details><summary>📋 Содержание</summary><ul><li><a href="#h1">Что такое Extensible Firmware Interface простыми словами</a></li><li><a href="#h2">Чем UEFI отличается от классического BIOS</a></li></ul></details></nav>
+<div class="article-body">
+<p>Extensible Firmware Interface (EFI) — это программный интерфейс между аппаратной частью компьютера и операционной системой, который пришёл на смену классическому BIOS и сегодня используется практически на каждом современном ПК и ноутбуке под именем <strong>UEFI</strong>. Если при включении машины вы видите логотип производителя вместо мигающего курсора, а вход в настройки выполняется через графическое меню с поддержкой мыши — перед вами именно этот интерфейс.</p>
+
+<p>Термины часто путают: <em>EFI</em> — исходная спецификация, разработанная Intel, а <em>UEFI (Unified EFI)</em> — её развитие, которое поддерживает отраслевой форум UEFI Forum. В статье разберём, как устроен этот интерфейс, чем он принципиально отличается от BIOS, что такое раздел ESP и как безопасно работать с настройками прошивки.</p>
+
+<h2 id="h1">Что такое Extensible Firmware Interface простыми словами</h2>
+
+<p>Когда вы нажимаете кнопку питания, процессор ещё ничего не знает о дисках, памяти и устройствах ввода. Первым делом управление получает <strong>прошивка</strong> — код, записанный в микросхему на материнской плате. Именно EFI/UEFI определяет, как эта прошивка инициализирует оборудование и передаёт управление загрузчику операционной системы.</p>
+
+<p>В отличие от BIOS, который представлял собой компактный код в реальном режиме процессора, EFI — это по сути миниатюрная программная среда со своими драйверами, приложениями и даже командной оболочкой <em>EFI Shell</em>. Архитектура модульная: производитель платы может добавлять собственные драйверы устройств, не переписывая весь код прошивки.</p>
+
+<p>Ключевые компоненты среды:</p>
+
+<ul>
+<li>🔧 <strong>Boot Manager</strong> — менеджер загрузки, хранящий список загрузочных записей в энергонезависимой памяти NVRAM;</li>
+<li>💾 <strong>ESP (EFI System Partition)</strong> — служебный раздел на диске с файлами загрузчиков в формате .efi;</li>
+<li>🧩 <strong>Драйверы EFI</strong> — модули поддержки оборудования, загружаемые до старта ОС;</li>
+<li>🖥️ <strong>Setup Utility</strong> — графический интерфейс настройки, который пользователи по привычке называют «BIOS».</li>
+</ul>
+
+<h2 id="h2">Чем UEFI отличается от классического BIOS</h2>
+
+<p>BIOS появился ещё в эпоху первых IBM PC и десятилетиями работал по одной схеме: читал первый сектор диска (MBR) и передавал ему управление. Такой подход ограничивал размер загрузочного диска и не предполагал ни графики, ни сетевых функций. UEFI снял эти ограничения, но главное — изменил саму логику загрузки.</p>
+
+<p>Вместо поиска кода в первом секторе диска прошивка обращается к записям в NVRAM, каждая из которых указывает путь к загрузчику на разделе ESP. Это позволяет держать на одном диске несколько независимых операционных систем и выбирать нужную прямо из меню прошивки.</p>
+
+<table>
+<thead>
+<tr><th>Параметр</th><th>BIOS (Legacy)</th><th>UEFI</th></tr>
+</thead>
+<tbody>
+<tr><td>Схема разметки диска</td><td>MBR</td><td>GPT (поддерживает и MBR)</td></tr>
+<tr><td>Максимальный размер загрузочного диска</td><td>Около 2 ТБ</td><td>Практически не ограничен</td></tr>
+<tr><td>Интерфейс настройки</td><td>Текстовый, только клавиатура</td><td>Графический, поддержка мыши</td></tr>
+<tr><td>Механизм загрузки</td><td>Код в первом секторе диска</td><td>Записи Boot Manager + файлы .efi на ESP</td></tr>
+<tr><td>Защита загрузки</td><td>Отсутствует</td><td>Secure Boot (проверка подписей)</td></tr>
+</tbody>
+</table>
+
+💡<p>UEFI — это не «новый BIOS», а полноценная предзагрузочная среда с драйверами, файловой системой и собственными приложениями.</p>
+</div>
+<div class="offer-banner" data-nosnippet>
+<h3>Анонимный чат в MAX</h3>
+<p>Найди собеседника прямо сейчас — анонимно и бесплатно</p>
+<div class="btns">
+<a href="https://max.ru/id370307848837_bot?start=vercel" target="_blank" rel="noopener nofollow sponsored">Поиск парней</a>
+<a href="https://max.ru/id370307848837_bot?start=vercel" target="_blank" rel="noopener nofollow sponsored" class="alt">Поиск девушек</a>
+</div>
+</div>
+
+<div class="article-updated">Обновлено 24 сентября 2026 г.</div></div><aside class="article-sidebar"><div class="sidebar-toc"><h3>Содержание</h3><ul><li><a href="#h1">Что такое Extensible Firmware Interface простыми словами</a></li><li><a href="#h2">Чем UEFI отличается от классического BIOS</a></li></ul></div><div class="sidebar-related"><h3>Похожие статьи</h3><ul><li><a href="/0--0---0-16-1/">0 16 1: что означают адреса 192.168.0.1, маска /16 и 192.168.1.1</a></li><li><a href="/0--0---0-4-6c-12-0-4-3c-7-pri-c-4-1-6/">Строка 0 4 6C 12 0 4 3C 7 при C 4 1 6: разбор hex-данных диагностики</a></li><li><a href="/0--0---0-5-amper/">0,5 Ампер: что это значит, где применяется и что можно заряжать</a></li><li><a href="/0--0---0-5kh-5-16-0-8/">Маркировка 5х… R16: как расшифровать параметры колёсных дисков</a></li></ul></div></aside></div><section class="related-bottom"><div class="related-bottom-heading">Читайте также</div><div class="related-bottom-grid"><a class="related-bottom-card" href="/0--0---0-16-1/"><div class="related-bottom-title">0 16 1: что означают адреса 192.168.0.1, маска /16 и 192.168.1.1</div><div class="related-bottom-desc">Разбираемся с запросом 0 16 1: что значат адреса 192.168.0.1 и 192.168.1.1, маска подсети /16, как проверить и настроить сеть на роутере и компьютере.</div></a><a class="related-bottom-card" href="/0--0---0-4-6c-12-0-4-3c-7-pri-c-4-1-6/"><div class="related-bottom-title">Строка 0 4 6C 12 0 4 3C 7 при C 4 1 6: разбор hex-данных диагностики</div><div class="related-bottom-desc">Разбираем шестнадцатеричную строку 0 4 6C 12 0 4 3C 7 при ответе C 4 1 6: что означают байты, как декодировать ответ ELM327 и проверить данные.</div></a><a class="related-bottom-card" href="/0--0---0-5-amper/"><div class="related-bottom-title">0,5 Ампер: что это значит, где применяется и что можно заряжать</div><div class="related-bottom-desc">Что означает ток 0,5 А на зарядке и блоке питания, какие устройства можно питать, чем грозит превышение нагрузки и как правильно подобрать адаптер.</div></a><a class="related-bottom-card" href="/0--0---0-5kh-5-16-0-8/"><div class="related-bottom-title">Маркировка 5х… R16: как расшифровать параметры колёсных дисков</div><div class="related-bottom-desc">Разбираем маркировку колёсных дисков вида 5х… R16: разболтовка, диаметр, вылет, ширина. Как правильно измерить параметры и подобрать диски к автомобилю.</div></a></div></section></div>
+</main>
+<footer><div class="wrap"><div class="footer-grid"><div class="footer-col"><div class="footer-brand">🔧 Софтовед</div><p class="footer-about">Разобраться. Настроить. Починить.</p></div><div class="footer-col"><h4>Информация</h4><ul><li><a href="/">Главная</a></li><li><a href="/about/">О проекте</a></li><li><a href="/sitemap.xml">Карта сайта</a></li></ul></div><div class="footer-col"><h4>Контакты</h4><ul><li>Информационный портал</li><li>Материалы носят справочный характер</li></ul></div></div><div class="footer-bottom">&copy; 2026 Софтовед. Все права защищены.</div></div></footer>
+<script>
+(function(){var p=document.getElementById('readProgress');if(!p)return;window.addEventListener('scroll',function(){var h=document.documentElement.scrollHeight-window.innerHeight;p.style.width=h>0?(window.scrollY/h*100)+'%':'0'});var b=document.querySelector('.mobile-menu-btn');if(b){b.addEventListener('click',function(){var n=this.nextElementSibling;if(n)n.classList.toggle('open')})}})();
+</script>
+<script>(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};m[i].l=1*new Date();for(var j=0;j<document.scripts.length;j++){if(document.scripts[j].src===r){return;}}k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})(window,document,'script','https://mc.yandex.ru/metrika/tag.js?id=112976139','ym');ym(112976139,'init',{ssr:true,webvisor:true,clickmap:true,accurateTrackBounce:true,trackLinks:true});</script><noscript><div><img src="https://mc.yandex.ru/watch/112976139" style="position:absolute;left:-9999px" alt=""></div></noscript>
+</body>
+</html>

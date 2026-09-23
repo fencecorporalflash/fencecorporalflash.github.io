@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Как расшифровать NFC метку: чтение данных и форматы записи</title>
+<meta name="description" content="Как расшифровать NFC метку на смартфоне: NDEF-формат, типы записей, приложения для чтения, чтение дампа памяти и решение проблем с нечитаемыми тегами.">
+<link rel="canonical" href="https://site-softoved.vercel.app/k--ka--kak-rasshifrovat-nfc-metku/">
+<meta name="yandex-verification" content="fc9f537217e81245" /><meta name="google-site-verification" content="fIx9eMknL_2iwjcMqK6htGou7eSQ2vqct7AAROaxXG0" />
+<meta property="og:type" content="article">
+<meta property="og:title" content="Как расшифровать NFC метку: чтение данных и форматы записи">
+<meta property="og:description" content="Как расшифровать NFC метку на смартфоне: NDEF-формат, типы записей, приложения для чтения, чтение дампа памяти и решение проблем с нечитаемыми тегами.">
+<meta property="og:url" content="https://site-softoved.vercel.app/k--ka--kak-rasshifrovat-nfc-metku/">
+<meta property="og:site_name" content="Софтовед">
+<meta property="og:locale" content="ru_RU">
+<meta name="robots" content="index, follow">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap">
+<link rel="stylesheet" href="/style.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Как расшифровать NFC метку: подробное руководство","description":"Как расшифровать NFC метку на смартфоне: NDEF-формат, типы записей, приложения для чтения, чтение дампа памяти и решение проблем с нечитаемыми тегами.","datePublished":"2026-09-24T10:00:00.000Z","dateModified":"2026-09-24T10:00:00.000Z","mainEntityOfPage":"https://site-softoved.vercel.app/k--ka--kak-rasshifrovat-nfc-metku/","publisher":{"@type":"Organization","name":"Софтовед"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Главная","item":"https://site-softoved.vercel.app/"},{"@type":"ListItem","position":2,"name":"Как расшифровать NFC метку: подробное руководство","item":"https://site-softoved.vercel.app/k--ka--kak-rasshifrovat-nfc-metku/"}]}</script>
+</head>
+<body>
+<div class="reading-progress" id="readProgress"></div><header class="top"><div class="wrap"><a class="logo" href="/"><span class="logo-icon">🔧</span><span>Софтовед</span></a><button class="mobile-menu-btn" aria-label="Меню" onclick="this.nextElementSibling.classList.toggle('open')">☰</button><nav><a href="/">Главная</a><a href="/category/разное/">📁 Разное</a><a href="/category/ноутбуки-и-пк/">💻 Ноутбуки и ПК</a><a href="/category/софт-ос-и-драйверы/">💾 Софт, ОС и драйверы</a><a href="/category/смартфоны-и-гаджеты/">📱 Смартфоны и гаджеты</a><div class="nav-dropdown"><button class="nav-dropdown-btn" onclick="this.parentElement.classList.toggle('open')">📂 Все разделы ▾</button><div class="nav-dropdown-menu"><a href="/category/разное/">📁 Разное</a><a href="/category/ноутбуки-и-пк/">💻 Ноутбуки и ПК</a><a href="/category/софт-ос-и-драйверы/">💾 Софт, ОС и драйверы</a><a href="/category/смартфоны-и-гаджеты/">📱 Смартфоны и гаджеты</a><a href="/category/ремонт-и-diy-электроника/">🛠️ Ремонт и DIY электроника</a><a href="/category/компоненты-и-запчасти/">🔩 Компоненты и запчасти</a><a href="/category/рации-и-радиостанции/">📻 Рации и радиостанции</a><a href="/category/табачные-нагреватели/">🌿 Табачные нагреватели</a><a href="/category/дроны-и-квадрокоптеры/">🚁 Дроны и квадрокоптеры</a><a href="/category/бытовая-техника-и-тв/">📺 Бытовая техника и ТВ</a><a href="/category/3d-печать/">🖨️ 3D-печать</a><a href="/category/автоэлектроника-и-навигация/">🚗 Автоэлектроника и навигация</a></div></div><a href="/about/">О проекте</a></nav></div></header>
+<main>
+<nav class="crumbs" aria-label="Навигация"><div class="wrap"><a href="/">Главная</a><span class="sep">›</span><a href="/category/разное/">Разное</a><span class="sep">›</span><span class="current">Как расшифровать NFC метку: подробное руководство</span></div></nav><div class="wrap"><div class="article-layout"><div class="article-main"><h1>Как расшифровать NFC метку: подробное руководство</h1>
+<div class="meta">Обновлено 24 сентября 2026 г.</div>
+<nav class="mobile-toc"><details><summary>📋 Содержание</summary><ul><li><a href="#h1">Что находится внутри NFC-метки</a></li><li><a href="#h2">Подготовка: что нужно для чтения метки</a></li></ul></details></nav>
+<div class="article-body">
+<p>Если смартфон при поднесении к NFC-метке показывает «неподдерживаемый формат» или пустую запись, чаще всего проблема не в самой метке, а в том, что данные записаны в формате, который система не умеет интерпретировать напрямую. Расшифровка NFC-метки — это чтение сырых данных из её памяти и корректная интерпретация структуры <strong>NDEF</strong> (NFC Data Exchange Format), в которой хранится большинство пользовательских записей.</p>
+
+<p>В этом руководстве разберём, как устроены данные внутри метки, какими инструментами их прочитать на Android и iPhone, как интерпретировать типы записей и что делать, если тег защищён паролем или использует проприетарный формат. Инструкция ориентирована на безопасные действия: только чтение, без изменения содержимого.</p>
+
+<h2 id="h1">Что находится внутри NFC-метки</h2>
+
+<p>NFC-метка — это пассивный чип с антенной, не имеющий собственного питания. Энергию для работы она получает от электромагнитного поля считывателя (смартфона). Внутри чипа находится энергонезависимая память, разбитая на страницы или блоки, объём которой зависит от типа чипа.</p>
+
+<p>Наиболее распространены чипы семейства <em>NTAG</em> (NTAG213, NTAG215, NTAG216) и <em>MIFARE Ultralight</em>. Объём пользовательской памяти у них различается: например, у NTAG213 он меньше, чем у NTAG216. Также встречаются метки стандартов ISO/IEC 14443 и ISO/IEC 15693 — последние часто используются в логистике и библиотеках.</p>
+
+<p>Данные в памяти организованы по стандарту <strong>NDEF</strong>: одна или несколько записей (records), каждая из которых имеет тип (URI, текст, MIME-данные и т.д.) и полезную нагрузку. Именно эту структуру и предстоит «расшифровать» — прочитать заголовки записей и извлечь содержимое.</p>
+
+<ul>
+<li>🏷️ <strong>URI-запись</strong> — ссылка на сайт, самый частый тип в маркетинговых метках;</li>
+<li>📄 <strong>Текстовая запись</strong> — произвольная строка с указанием языка;</li>
+<li>📱 <strong>Запись запуска приложения</strong> — Android Application Record;</li>
+<li>🔐 <strong>Защищённые данные</strong> — страницы памяти, закрытые паролем или ключом.</li>
+</ul>
+
+<h2 id="h2">Подготовка: что нужно для чтения метки</h2>
+
+<p>Прежде всего убедитесь, что в смартфоне включён модуль NFC. На Android это обычно Настройки → Подключённые устройства → NFC (путь может отличаться в зависимости от оболочки). На iPhone модуль NFC для чтения меток активен по умолчанию на поддерживаемых моделях.</p>
+
+<p>Для простого чтения NDEF-записей достаточно системных средств: поднесите метку к задней панели телефона, и система покажет ссылку или текст. Однако для полноценной расшифровки — просмотра структуры записей, типа чипа и дампа памяти — понадобится специализированное приложение.</p>
+
+💡<p>Точка наилучшего приёма NFC-антенны у разных смартфонов расположена по-разному: чаще возле камеры или в центре задней панели. Если метка не читается, медленно поводите её по площади корпуса, а не пытайтесь прижать сильнее.</p>
+</div>
+<div class="offer-banner" data-nosnippet>
+<h3>Анонимный чат в MAX</h3>
+<p>Найди собеседника прямо сейчас — анонимно и бесплатно</p>
+<div class="btns">
+<a href="https://max.ru/id370307848837_bot?start=vercel" target="_blank" rel="noopener nofollow sponsored">Поиск парней</a>
+<a href="https://max.ru/id370307848837_bot?start=vercel" target="_blank" rel="noopener nofollow sponsored" class="alt">Поиск девушек</a>
+</div>
+</div>
+
+<div class="article-updated">Обновлено 24 сентября 2026 г.</div></div><aside class="article-sidebar"><div class="sidebar-toc"><h3>Содержание</h3><ul><li><a href="#h1">Что находится внутри NFC-метки</a></li><li><a href="#h2">Подготовка: что нужно для чтения метки</a></li></ul></div><div class="sidebar-related"><h3>Похожие статьи</h3><ul><li><a href="/0--0---0-16-1/">0 16 1: что означают адреса 192.168.0.1, маска /16 и 192.168.1.1</a></li><li><a href="/0--0---0-4-6c-12-0-4-3c-7-pri-c-4-1-6/">Строка 0 4 6C 12 0 4 3C 7 при C 4 1 6: разбор hex-данных диагностики</a></li><li><a href="/0--0---0-5-amper/">0,5 Ампер: что это значит, где применяется и что можно заряжать</a></li><li><a href="/0--0---0-5kh-5-16-0-8/">Маркировка 5х… R16: как расшифровать параметры колёсных дисков</a></li></ul></div></aside></div><section class="related-bottom"><div class="related-bottom-heading">Читайте также</div><div class="related-bottom-grid"><a class="related-bottom-card" href="/0--0---0-16-1/"><div class="related-bottom-title">0 16 1: что означают адреса 192.168.0.1, маска /16 и 192.168.1.1</div><div class="related-bottom-desc">Разбираемся с запросом 0 16 1: что значат адреса 192.168.0.1 и 192.168.1.1, маска подсети /16, как проверить и настроить сеть на роутере и компьютере.</div></a><a class="related-bottom-card" href="/0--0---0-4-6c-12-0-4-3c-7-pri-c-4-1-6/"><div class="related-bottom-title">Строка 0 4 6C 12 0 4 3C 7 при C 4 1 6: разбор hex-данных диагностики</div><div class="related-bottom-desc">Разбираем шестнадцатеричную строку 0 4 6C 12 0 4 3C 7 при ответе C 4 1 6: что означают байты, как декодировать ответ ELM327 и проверить данные.</div></a><a class="related-bottom-card" href="/0--0---0-5-amper/"><div class="related-bottom-title">0,5 Ампер: что это значит, где применяется и что можно заряжать</div><div class="related-bottom-desc">Что означает ток 0,5 А на зарядке и блоке питания, какие устройства можно питать, чем грозит превышение нагрузки и как правильно подобрать адаптер.</div></a><a class="related-bottom-card" href="/0--0---0-5kh-5-16-0-8/"><div class="related-bottom-title">Маркировка 5х… R16: как расшифровать параметры колёсных дисков</div><div class="related-bottom-desc">Разбираем маркировку колёсных дисков вида 5х… R16: разболтовка, диаметр, вылет, ширина. Как правильно измерить параметры и подобрать диски к автомобилю.</div></a></div></section></div>
+</main>
+<footer><div class="wrap"><div class="footer-grid"><div class="footer-col"><div class="footer-brand">🔧 Софтовед</div><p class="footer-about">Разобраться. Настроить. Починить.</p></div><div class="footer-col"><h4>Информация</h4><ul><li><a href="/">Главная</a></li><li><a href="/about/">О проекте</a></li><li><a href="/sitemap.xml">Карта сайта</a></li></ul></div><div class="footer-col"><h4>Контакты</h4><ul><li>Информационный портал</li><li>Материалы носят справочный характер</li></ul></div></div><div class="footer-bottom">&copy; 2026 Софтовед. Все права защищены.</div></div></footer>
+<script>
+(function(){var p=document.getElementById('readProgress');if(!p)return;window.addEventListener('scroll',function(){var h=document.documentElement.scrollHeight-window.innerHeight;p.style.width=h>0?(window.scrollY/h*100)+'%':'0'});var b=document.querySelector('.mobile-menu-btn');if(b){b.addEventListener('click',function(){var n=this.nextElementSibling;if(n)n.classList.toggle('open')})}})();
+</script>
+<script>(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};m[i].l=1*new Date();for(var j=0;j<document.scripts.length;j++){if(document.scripts[j].src===r){return;}}k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})(window,document,'script','https://mc.yandex.ru/metrika/tag.js?id=112976139','ym');ym(112976139,'init',{ssr:true,webvisor:true,clickmap:true,accurateTrackBounce:true,trackLinks:true});</script><noscript><div><img src="https://mc.yandex.ru/watch/112976139" style="position:absolute;left:-9999px" alt=""></div></noscript>
+</body>
+</html>

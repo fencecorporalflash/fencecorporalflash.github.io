@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Северный мост Intel Haswell-EP и IMC0: устройство, диагностика, ошибки</title>
+<meta name="description" content="Что такое IMC0 в процессорах Intel Xeon Haswell-EP, как устроен контроллер памяти, типичные ошибки и способы диагностики северного моста.">
+<link rel="canonical" href="https://site-softoved.vercel.app/s--se--severnyj-most-intel-haswell-ep-imc0/">
+<meta name="yandex-verification" content="fc9f537217e81245" /><meta name="google-site-verification" content="fIx9eMknL_2iwjcMqK6htGou7eSQ2vqct7AAROaxXG0" />
+<meta property="og:type" content="article">
+<meta property="og:title" content="Северный мост Intel Haswell-EP и IMC0: устройство, диагностика, ошибки">
+<meta property="og:description" content="Что такое IMC0 в процессорах Intel Xeon Haswell-EP, как устроен контроллер памяти, типичные ошибки и способы диагностики северного моста.">
+<meta property="og:url" content="https://site-softoved.vercel.app/s--se--severnyj-most-intel-haswell-ep-imc0/">
+<meta property="og:site_name" content="Софтовед">
+<meta property="og:locale" content="ru_RU">
+<meta name="robots" content="index, follow">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap">
+<link rel="stylesheet" href="/style.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Северный мост Intel Haswell-EP и контроллер памяти IMC0: устройство и диагностика","description":"Что такое IMC0 в процессорах Intel Xeon Haswell-EP, как устроен контроллер памяти, типичные ошибки и способы диагностики северного моста.","datePublished":"2026-09-24T10:00:00.000Z","dateModified":"2026-09-24T10:00:00.000Z","mainEntityOfPage":"https://site-softoved.vercel.app/s--se--severnyj-most-intel-haswell-ep-imc0/","publisher":{"@type":"Organization","name":"Софтовед"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Главная","item":"https://site-softoved.vercel.app/"},{"@type":"ListItem","position":2,"name":"Северный мост Intel Haswell-EP и контроллер памяти IMC0: устройство и диагностика","item":"https://site-softoved.vercel.app/s--se--severnyj-most-intel-haswell-ep-imc0/"}]}</script>
+</head>
+<body>
+<div class="reading-progress" id="readProgress"></div><header class="top"><div class="wrap"><a class="logo" href="/"><span class="logo-icon">🔧</span><span>Софтовед</span></a><button class="mobile-menu-btn" aria-label="Меню" onclick="this.nextElementSibling.classList.toggle('open')">☰</button><nav><a href="/">Главная</a><a href="/category/разное/">📁 Разное</a><a href="/category/ноутбуки-и-пк/">💻 Ноутбуки и ПК</a><a href="/category/софт-ос-и-драйверы/">💾 Софт, ОС и драйверы</a><a href="/category/смартфоны-и-гаджеты/">📱 Смартфоны и гаджеты</a><div class="nav-dropdown"><button class="nav-dropdown-btn" onclick="this.parentElement.classList.toggle('open')">📂 Все разделы ▾</button><div class="nav-dropdown-menu"><a href="/category/разное/">📁 Разное</a><a href="/category/ноутбуки-и-пк/">💻 Ноутбуки и ПК</a><a href="/category/софт-ос-и-драйверы/">💾 Софт, ОС и драйверы</a><a href="/category/смартфоны-и-гаджеты/">📱 Смартфоны и гаджеты</a><a href="/category/ремонт-и-diy-электроника/">🛠️ Ремонт и DIY электроника</a><a href="/category/компоненты-и-запчасти/">🔩 Компоненты и запчасти</a><a href="/category/рации-и-радиостанции/">📻 Рации и радиостанции</a><a href="/category/табачные-нагреватели/">🌿 Табачные нагреватели</a><a href="/category/дроны-и-квадрокоптеры/">🚁 Дроны и квадрокоптеры</a><a href="/category/бытовая-техника-и-тв/">📺 Бытовая техника и ТВ</a><a href="/category/3d-печать/">🖨️ 3D-печать</a><a href="/category/автоэлектроника-и-навигация/">🚗 Автоэлектроника и навигация</a></div></div><a href="/about/">О проекте</a></nav></div></header>
+<main>
+<nav class="crumbs" aria-label="Навигация"><div class="wrap"><a href="/">Главная</a><span class="sep">›</span><a href="/category/разное/">Разное</a><span class="sep">›</span><span class="current">Северный мост Intel Haswell-EP и контроллер памяти IMC0: устройство и диагностика</span></div></nav><div class="wrap"><div class="article-layout"><div class="article-main"><h1>Северный мост Intel Haswell-EP и контроллер памяти IMC0: устройство и диагностика</h1>
+<div class="meta">Обновлено 24 сентября 2026 г.</div>
+<nav class="mobile-toc"><details><summary>📋 Содержание</summary><ul><li><a href="#h1">Что такое северный мост в архитектуре Haswell-EP</a></li><li><a href="#h2">IMC0 и IMC1: как устроены контроллеры памяти</a></li></ul></details></nav>
+<div class="article-body">
+<p>Строка IMC0 в выводе системных утилит на сервере или рабочей станции с процессором <em>Intel Xeon E5 v3 (Haswell-EP)</em> означает первый из двух встроенных контроллеров памяти, и именно его состояние чаще всего объясняет ошибки инициализации DIMM, исчезновение части ОЗУ или отказ POST. В архитектуре Haswell-EP классического отдельного «северного моста» в виде чипа на материнской плате уже нет: его функции — контроллеры памяти, линии PCI Express, шины QPI — интегрированы непосредственно в кристалл процессора и в так называемый <strong>uncore</strong> (системный агент).</p>
+
+<p>Понимание того, что скрывается за обозначениями IMC0 и IMC1, помогает грамотно диагностировать проблемы с памятью, расшифровывать логи <em>EDAC</em> в Linux и сообщения BIOS, а также правильно распределять модули DIMM по каналам. Разберём устройство этого блока, типичные неисправности и безопасные способы проверки.</p>
+
+<h2 id="h1">Что такое северный мост в архитектуре Haswell-EP</h2>
+
+<p>Исторически <strong>северный мост</strong> — отдельная микросхема чипсета, отвечавшая за связь процессора с оперативной памятью и видеокартой. Начиная с поколения Nehalem, Intel перенесла контроллер памяти в сам процессор, а к Haswell-EP (2014 год, серверная платформа <em>Grantley</em> с чипсетом <em>C610</em>) от отдельного северного моста на плате осталось только название.</p>
+
+<p>В Haswell-EP функции бывшего северного моста распределены внутри кристалла CPU:</p>
+
+<ul>
+<li>🧠 <strong>IMC (Integrated Memory Controller)</strong> — два независимых контроллера памяти DDR4, каждый обслуживает два канала, итого до четырёх каналов на процессор</li>
+<li>🔌 <strong>Контроллер PCI Express 3.0</strong> — до 40 линий на процессор для слотов расширения</li>
+<li>🔗 <strong>QPI (QuickPath Interconnect)</strong> — две линии для связи процессоров в двухсокетных конфигурациях</li>
+<li>📡 <strong>Home Agent и кэш-агенты</strong> — логика когерентности кэша LLC между ядрами и сокетами</li>
+</ul>
+
+<p>Южный мост при этом остался отдельным чипом — это PCH <em>C610 series</em> (Wellsburg), отвечающий за SATA, USB, сеть и низкоскоростные интерфейсы. Поэтому, когда в документации или логах встречается «северный мост Haswell-EP», речь фактически идёт о <em>uncore</em> процессора.</p>
+
+<h2 id="h2">IMC0 и IMC1: как устроены контроллеры памяти</h2>
+
+<p>Каждый процессор Haswell-EP содержит два контроллера памяти. <strong>IMC0</strong> обслуживает каналы A и B, <strong>IMC1</strong> — каналы C и D. Каждый канал поддерживает до трёх слотов DIMM (в зависимости от платы), что даёт до 12 модулей на один сокет в максимальных конфигурациях.</p>
+
+<p>В Linux-утилитах, например в выводе edac-util или dmidecode, контроллеры отображаются как отдельные устройства. Посмотреть привязку можно так:</p>
+
+edac-util --status
+<p>ls /sys/devices/system/edac/mc/</p>
+<p>dmidecode -t memory | less</p>
+
+<p>Каталоги вида mc0, mc1 в подсистеме EDAC соответствуют контроллерам памяти. Точное сопоставление номеров mc с физическими IMC зависит от конкретной платы и версии ядра, поэтому перед выводами стоит свериться с документацией на материнскую плату — там указано, какие слоты к какому каналу относятся.</p>
+
+💡<p>IMC0 — это не отдельный чип, а первый из двух контроллеров памяти DDR4 внутри процессора Xeon E5 v3. Ошибки по IMC0 указывают на каналы A/B конкретного сокета.</p>
+</div>
+<div class="offer-banner" data-nosnippet>
+<h3>Анонимный чат в MAX</h3>
+<p>Найди собеседника прямо сейчас — анонимно и бесплатно</p>
+<div class="btns">
+<a href="https://max.ru/id370307848837_bot?start=vercel" target="_blank" rel="noopener nofollow sponsored">Поиск парней</a>
+<a href="https://max.ru/id370307848837_bot?start=vercel" target="_blank" rel="noopener nofollow sponsored" class="alt">Поиск девушек</a>
+</div>
+</div>
+
+<div class="article-updated">Обновлено 24 сентября 2026 г.</div></div><aside class="article-sidebar"><div class="sidebar-toc"><h3>Содержание</h3><ul><li><a href="#h1">Что такое северный мост в архитектуре Haswell-EP</a></li><li><a href="#h2">IMC0 и IMC1: как устроены контроллеры памяти</a></li></ul></div><div class="sidebar-related"><h3>Похожие статьи</h3><ul><li><a href="/0--0---0-16-1/">0 16 1: что означают адреса 192.168.0.1, маска /16 и 192.168.1.1</a></li><li><a href="/0--0---0-4-6c-12-0-4-3c-7-pri-c-4-1-6/">Строка 0 4 6C 12 0 4 3C 7 при C 4 1 6: разбор hex-данных диагностики</a></li><li><a href="/0--0---0-5-amper/">0,5 Ампер: что это значит, где применяется и что можно заряжать</a></li><li><a href="/0--0---0-5kh-5-16-0-8/">Маркировка 5х… R16: как расшифровать параметры колёсных дисков</a></li></ul></div></aside></div><section class="related-bottom"><div class="related-bottom-heading">Читайте также</div><div class="related-bottom-grid"><a class="related-bottom-card" href="/0--0---0-16-1/"><div class="related-bottom-title">0 16 1: что означают адреса 192.168.0.1, маска /16 и 192.168.1.1</div><div class="related-bottom-desc">Разбираемся с запросом 0 16 1: что значат адреса 192.168.0.1 и 192.168.1.1, маска подсети /16, как проверить и настроить сеть на роутере и компьютере.</div></a><a class="related-bottom-card" href="/0--0---0-4-6c-12-0-4-3c-7-pri-c-4-1-6/"><div class="related-bottom-title">Строка 0 4 6C 12 0 4 3C 7 при C 4 1 6: разбор hex-данных диагностики</div><div class="related-bottom-desc">Разбираем шестнадцатеричную строку 0 4 6C 12 0 4 3C 7 при ответе C 4 1 6: что означают байты, как декодировать ответ ELM327 и проверить данные.</div></a><a class="related-bottom-card" href="/0--0---0-5-amper/"><div class="related-bottom-title">0,5 Ампер: что это значит, где применяется и что можно заряжать</div><div class="related-bottom-desc">Что означает ток 0,5 А на зарядке и блоке питания, какие устройства можно питать, чем грозит превышение нагрузки и как правильно подобрать адаптер.</div></a><a class="related-bottom-card" href="/0--0---0-5kh-5-16-0-8/"><div class="related-bottom-title">Маркировка 5х… R16: как расшифровать параметры колёсных дисков</div><div class="related-bottom-desc">Разбираем маркировку колёсных дисков вида 5х… R16: разболтовка, диаметр, вылет, ширина. Как правильно измерить параметры и подобрать диски к автомобилю.</div></a></div></section></div>
+</main>
+<footer><div class="wrap"><div class="footer-grid"><div class="footer-col"><div class="footer-brand">🔧 Софтовед</div><p class="footer-about">Разобраться. Настроить. Починить.</p></div><div class="footer-col"><h4>Информация</h4><ul><li><a href="/">Главная</a></li><li><a href="/about/">О проекте</a></li><li><a href="/sitemap.xml">Карта сайта</a></li></ul></div><div class="footer-col"><h4>Контакты</h4><ul><li>Информационный портал</li><li>Материалы носят справочный характер</li></ul></div></div><div class="footer-bottom">&copy; 2026 Софтовед. Все права защищены.</div></div></footer>
+<script>
+(function(){var p=document.getElementById('readProgress');if(!p)return;window.addEventListener('scroll',function(){var h=document.documentElement.scrollHeight-window.innerHeight;p.style.width=h>0?(window.scrollY/h*100)+'%':'0'});var b=document.querySelector('.mobile-menu-btn');if(b){b.addEventListener('click',function(){var n=this.nextElementSibling;if(n)n.classList.toggle('open')})}})();
+</script>
+<script>(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};m[i].l=1*new Date();for(var j=0;j<document.scripts.length;j++){if(document.scripts[j].src===r){return;}}k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})(window,document,'script','https://mc.yandex.ru/metrika/tag.js?id=112976139','ym');ym(112976139,'init',{ssr:true,webvisor:true,clickmap:true,accurateTrackBounce:true,trackLinks:true});</script><noscript><div><img src="https://mc.yandex.ru/watch/112976139" style="position:absolute;left:-9999px" alt=""></div></noscript>
+</body>
+</html>

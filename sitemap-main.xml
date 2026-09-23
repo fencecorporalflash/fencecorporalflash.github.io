@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<url><loc>https://site-softoved.vercel.app/</loc></url>
+<url><loc>https://site-softoved.vercel.app/about/</loc></url>
+<url><loc>https://site-softoved.vercel.app/search/</loc></url>
+<url><loc>https://site-softoved.vercel.app/category/разное/</loc><priority>0.8</priority></url>
+<url><loc>https://site-softoved.vercel.app/category/ноутбуки-и-пк/</loc><priority>0.8</priority></url>
+<url><loc>https://site-softoved.vercel.app/category/софт-ос-и-драйверы/</loc><priority>0.8</priority></url>
+<url><loc>https://site-softoved.vercel.app/category/смартфоны-и-гаджеты/</loc><priority>0.8</priority></url>
+<url><loc>https://site-softoved.vercel.app/category/ремонт-и-diy-электроника/</loc><priority>0.8</priority></url>
+<url><loc>https://site-softoved.vercel.app/category/компоненты-и-запчасти/</loc><priority>0.8</priority></url>
+<url><loc>https://site-softoved.vercel.app/category/рации-и-радиостанции/</loc><priority>0.8</priority></url>
+<url><loc>https://site-softoved.vercel.app/category/табачные-нагреватели/</loc><priority>0.8</priority></url>
+<url><loc>https://site-softoved.vercel.app/category/дроны-и-квадрокоптеры/</loc><priority>0.8</priority></url>
+<url><loc>https://site-softoved.vercel.app/category/бытовая-техника-и-тв/</loc><priority>0.8</priority></url>
+<url><loc>https://site-softoved.vercel.app/category/3d-печать/</loc><priority>0.8</priority></url>
+<url><loc>https://site-softoved.vercel.app/category/автоэлектроника-и-навигация/</loc><priority>0.8</priority></url>
+</urlset>
